@@ -8,4 +8,3 @@ PHC-Press add blog and news posting abilities to your ruby on rails powered webs
 * Seperate News & Blog Sections
 * Highly Customizable
 * Easy Integration into Projects
-* 
