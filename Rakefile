@@ -20,7 +20,7 @@ load 'rails/tasks/engine.rake'
 
 load 'rails/tasks/statistics.rake'
 
-
+task :default => :test
 
 Bundler::GemHelper.install_tasks
 
