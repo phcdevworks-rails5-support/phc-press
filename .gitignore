@@ -39,3 +39,4 @@ build/
 ## Environment
 /.bundle/
 /lib/bundler/man/
+/vendor/
