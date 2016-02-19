@@ -1,0 +1,21 @@
+<%= form_for(@postprocess_status) do |f| %>
+  <% if @postprocess_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@postprocess_status.errors.count, "error") %> prohibited this postprocess_status from being saved:</h2>
+
+      <ul>
+      <% @postprocess_status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pststatus %><br>
+    <%= f.text_field :pststatus %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
