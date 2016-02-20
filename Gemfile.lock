@@ -207,7 +207,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
+  capybara (~> 2.6)
   codeclimate-test-reporter
   database_cleaner
   factory_girl_rails (~> 4.4.1)

@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
 
 	s.add_development_dependency 'factory_girl_rails', '~> 4.4.1'
 	s.add_development_dependency 'rspec-rails'
-	s.add_development_dependency 'capybara'
+	s.add_development_dependency 'capybara', '~> 2.6'
 
 	s.add_development_dependency 'faker'
 	s.add_development_dependency 'selenium-webdriver', '~> 2.52'
