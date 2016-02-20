@@ -25,9 +25,9 @@
 							<td><%= news_post.newspsttext %></td>
 							<td><%= news_post.pststatus %></td>
 							<td><div class="btn-group" role="group" aria-label="News Articles">
-								<%= link_to 'Show', news_post, class: "btn btn-default" %>
-								<%= link_to 'Edit', edit_news_post_path(news_post), class: "btn btn-default" %>
-								<%= link_to 'Destroy', news_post, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+								<%= link_to 'Show', news_post, class: "btn btn-primary btn-xs" %>
+								<%= link_to 'Edit', edit_news_post_path(news_post), class: "btn btn-primary btn-xs" %>
+								<%= link_to 'Destroy', news_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
 							</div></td>
 						</tr>
 					<% end %>
