@@ -4,7 +4,7 @@ class CreatePhcpressNewsPosts < ActiveRecord::Migration
 
 			t.string :newspsttitle
 			t.text :newspsttext
-			t.references :pststatus, index: true, foreign_key: true
+			t.string :pststatus
 
 			t.timestamps null: false
 

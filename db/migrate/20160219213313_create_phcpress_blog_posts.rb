@@ -4,7 +4,7 @@ class CreatePhcpressBlogPosts < ActiveRecord::Migration
 
 			t.string :blogpsttitle
 			t.text :blogpsttext
-			t.references :pststatus, index: true, foreign_key: true
+			t.string :pststatus
 
 			t.timestamps null: false
 

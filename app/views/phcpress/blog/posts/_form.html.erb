@@ -1,29 +1,22 @@
 <%= form_for(@blog_post) do |f| %>
-  <% if @blog_post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
 
-      <ul>
-      <% @blog_post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<div class="form-group">
+		<label><%= f.label :blogpsttitle, "Title" %></label>
+		<%= f.text_field :blogpsttitle, class: "form-control" %>
+	</div>
 
-  <div class="field">
-    <%= f.label :blogpsttitle %><br>
-    <%= f.text_field :blogpsttitle %>
-  </div>
-  <div class="field">
-    <%= f.label :blogpsttext %><br>
-    <%= f.text_area :blogpsttext %>
-  </div>
-  <div class="field">
-    <%= f.label :pststatus_id %><br>
-    <%= f.text_field :pststatus_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="form-group">
+		<label><%= f.label :blogpsttext, "Text" %></label>
+		<%= f.text_area :blogpsttext, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<label><%= f.label :pststatus, "Post Status" %></label>
+		<%= f.text_field :pststatus, class: "form-control" %>
+	</div>
+
+	<div class="actions">
+		<%= f.submit "Submit", class: "btn btn-primary btn-sm" %>
+	</div>
+
 <% end %>
