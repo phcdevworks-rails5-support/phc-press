@@ -209,14 +209,14 @@ PLATFORMS
 DEPENDENCIES
   capybara (~> 2.6)
   codeclimate-test-reporter
-  database_cleaner
+  database_cleaner (~> 1.5)
   factory_girl_rails (~> 4.4.1)
-  faker
+  faker (~> 1.6)
   laundry (~> 0.0.8)
   phcpress!
-  rspec-rails
+  rspec-rails (~> 3.4)
   selenium-webdriver (~> 2.52)
-  sqlite3
+  sqlite3 (~> 1.3)
 
 BUNDLED WITH
    1.11.2
