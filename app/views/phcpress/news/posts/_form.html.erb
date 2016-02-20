@@ -1,29 +1,32 @@
 <%= form_for(@news_post) do |f| %>
-  <% if @news_post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@news_post.errors.count, "error") %> prohibited this news_post from being saved:</h2>
 
-      <ul>
-      <% @news_post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<% if @news_post.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@news_post.errors.count, "error") %> prohibited this news_post from being saved:</h2>
 
-  <div class="field">
-    <%= f.label :newspsttitle %><br>
-    <%= f.text_field :newspsttitle %>
-  </div>
-  <div class="field">
-    <%= f.label :newspsttext %><br>
-    <%= f.text_area :newspsttext %>
-  </div>
-  <div class="field">
-    <%= f.label :pststatus_id %><br>
-    <%= f.text_field :pststatus_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+			<ul>
+				<% @news_post.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<div class="form-group">
+		<label><%= f.label :pstname, "Post Name" %></label>
+		<%= f.text_field :pstname, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<label><%= f.label :psttxt, "Post Text" %></label>
+		<%= f.text_area :psttxt, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<label><%= f.label :pststatus, "Post Status" %></label>
+		<%= f.select :pststatus, [['Draft','draft'],['Publish','publish'],['Review','review']], class: "form-control" %>
+	</div>
+
+	<div class="actions">
+		<%= f.submit "Submit", class: "btn btn-primary btn-sm" %>
+	</div>
+
 <% end %>

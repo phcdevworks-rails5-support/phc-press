@@ -12,7 +12,7 @@
 
 	<div class="form-group">
 		<label><%= f.label :pststatus, "Post Status" %></label>
-		<%= f.text_field :pststatus, class: "form-control" %>
+		<%= f.select :pststatus, [['Draft','draft'],['Publish','publish'],['Review','review']], class: "form-control" %>
 	</div>
 
 	<div class="actions">
