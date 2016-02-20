@@ -1,4 +1,4 @@
 module Phcpress
-  module News::PostsHelper
-  end
+	module News::PostsHelper
+	end
 end
