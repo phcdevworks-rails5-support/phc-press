@@ -1,6 +1,16 @@
 <%= form_for(@news_post) do |f| %>
 
-	<%= render 'layouts/notifications' %>
+	<% if @news_post.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@news_post.errors.count, "error") %> prohibited this news_post from being saved:</h2>
+
+			<ul>
+				<% @news_post.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 
 	<div class="form-group">
 		<label><%= f.label :newspsttitle, "Post Name" %></label>
