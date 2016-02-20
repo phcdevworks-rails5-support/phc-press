@@ -36,10 +36,10 @@ RSpec.configure do |config|
 	config.use_transactional_fixtures = true
 
 	# Include Factory Girl
-	config.include FactoryGirl::Syntax::Methods
+	# config.include FactoryGirl::Syntax::Methods
 
 	# Include custom login macros
-	config.include LoginMacros
+	# config.include LoginMacros
 
 	# Configure DatabaseCleaner
 	config.before(:suite) do
