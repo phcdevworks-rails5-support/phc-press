@@ -11,32 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220021605) do
+ActiveRecord::Schema.define(version: 20160220042748) do
 
   create_table "phcpress_blog_posts", force: :cascade do |t|
     t.string   "blogpsttitle"
     t.text     "blogpsttext"
-    t.integer  "pststatus_id"
+    t.string   "pststatus"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
-
-  add_index "phcpress_blog_posts", ["pststatus_id"], name: "index_phcpress_blog_posts_on_pststatus_id"
 
   create_table "phcpress_news_posts", force: :cascade do |t|
     t.string   "newspsttitle"
     t.text     "newspsttext"
-    t.integer  "pststatus_id"
+    t.string   "pststatus"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-  end
-
-  add_index "phcpress_news_posts", ["pststatus_id"], name: "index_phcpress_news_posts_on_pststatus_id"
-
-  create_table "phcpress_postprocess_statuses", force: :cascade do |t|
-    t.string   "pststatus"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
