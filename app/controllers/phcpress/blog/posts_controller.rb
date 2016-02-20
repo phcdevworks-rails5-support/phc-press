@@ -31,7 +31,7 @@ module Phcpress
 			@blog_post = Blog::Post.new(blog_post_params)
 
 			if @blog_post.save
-				redirect_to @blog_post, notice: 'Post was successfully created.'
+				redirect_to blog_posts, notice: 'Post was successfully created.'
 			else
 				render :new
 			end
@@ -40,7 +40,7 @@ module Phcpress
 		# PATCH/PUT
 		def update
 			if @blog_post.update(blog_post_params)
-				redirect_to @blog_post, notice: 'Post was successfully updated.'
+				redirect_to blog_posts, notice: 'Post was successfully updated.'
 			else
 				render :edit
 			end
@@ -49,7 +49,7 @@ module Phcpress
 		# DELETE
 		def destroy
 			@blog_post.destroy
-			redirect_to blog_posts_url, notice: 'Post was successfully destroyed.'
+			redirect_to blog_posts, notice: 'Post was successfully destroyed.'
 		end
 
 		private
