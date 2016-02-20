@@ -1,5 +1,7 @@
 <%= form_for(@blog_post) do |f| %>
 
+	<%= render 'layouts/notifications' %>
+
 	<div class="form-group">
 		<label><%= f.label :blogpsttitle, "Title" %></label>
 		<%= f.text_field :blogpsttitle, class: "form-control" %>
