@@ -1,3 +1,9 @@
+# Load Requried Dependecies
+require 'jquery-rails'
+require 'sass-rails'
+require 'bootstrap-sass'
+require 'font-awesome-rails'
+
 module Phcpress
 	class Engine < ::Rails::Engine
 		isolate_namespace Phcpress
