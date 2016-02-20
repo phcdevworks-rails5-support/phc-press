@@ -1,5 +1,4 @@
 module Phcpress
-  class Blog::Post < ActiveRecord::Base
-    belongs_to :pststatus
-  end
+	class Blog::Post < ActiveRecord::Base
+	end
 end
