@@ -1,12 +1,13 @@
-# Load Rails Helper
 require 'rails_helper'
 
 module Phcpress
-
+	RSpec.describe Blog::Post, type: :model do
 	describe Blog::Post do
-		 it "has a valid factory" do 
-		 	expect(FactoryGirl.build(:blog_post)).to be_valid
-		 end
+	  it "is valid with a newspsttitle, newspsttext and pststatus"
+	
+	
+	
+	  
 	end
-
+end
 end

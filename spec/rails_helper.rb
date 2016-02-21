@@ -7,6 +7,10 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'database_cleaner'
 require 'factory_girl'
+require "capybara/rspec"
+
+FactoryGirl.definition_file_paths << File.join(File.dirname(__FILE__), 'factories')
+FactoryGirl.find_definitions
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -35,7 +39,7 @@ RSpec.configure do |config|
 	# If you're not using ActiveRecord, or you'd prefer not to run each of your
 	# examples within a transaction, remove the following line or assign false
 	# instead of true.
-	config.use_transactional_fixtures = true
+	# config.use_transactional_fixtures = true
 
 	# Include Factory Girl
 	config.include FactoryGirl::Syntax::Methods
