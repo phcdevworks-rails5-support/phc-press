@@ -1,6 +1,7 @@
 require 'rails/generators/base'
 
-module phcpress
+module Phcpress
+
 	module Generators
 
 		module ViewPathTemplates
@@ -54,4 +55,5 @@ module phcpress
 			invoke SharedViewsGenerator
 		end
 	end
+
 end
