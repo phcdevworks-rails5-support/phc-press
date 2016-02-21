@@ -8,3 +8,15 @@ PHC-Press add blog and news posting abilities to your ruby on rails powered webs
 * Seperate News & Blog Sections
 * Highly Customizable
 * Easy Integration into Projects
+
+
+#### Step 1 - Add PHCPress to your gemfile
+
+	gem 'phcpress', '~> 0.1.5b'  
+	bundle exec install 
+  
+#### Step 2 - Mount the Engine in your Routes File  
+Mount the Engine in your Routes File (App must have Root route)
+  
+	mount Phcpress::Engine, :at => '/'
+  
