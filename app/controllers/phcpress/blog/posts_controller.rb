@@ -6,7 +6,7 @@ module Phcpress
 	class Blog::PostsController < ApplicationController
 
 		# Filters & Security
-		before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
+		before_action :set_blog_post, only: [:edit, :update, :destroy]
 
 		# Blog Post Index (/blog/posts)
 		def index
@@ -14,8 +14,8 @@ module Phcpress
 		end
 
 		# Single Blog Post (/blog/posts/1)
-		def show
-		end
+		#def show
+		#end
 
 		# Create a New Blog Post (/blog/posts/new)
 		def new

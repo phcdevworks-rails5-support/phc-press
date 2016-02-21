@@ -6,7 +6,7 @@ module Phcpress
 	class News::PostsController < ApplicationController
 
 		# Filters & Security
-		before_action :set_news_post, only: [:show, :edit, :update, :destroy]
+		before_action :set_news_post, only: [:edit, :update, :destroy]
 
 		# News Post Index (/news/posts)
 		def index
@@ -14,8 +14,8 @@ module Phcpress
 		end
 
 		# Single News Post (/news/posts/1)
-		def show
-		end
+		#def show
+		#end
 
 		# Create a New News Post (/news/posts/new)
 		def new
