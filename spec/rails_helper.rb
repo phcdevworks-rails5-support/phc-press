@@ -7,8 +7,8 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'database_cleaner'
 require 'factory_girl'
-require "capybara/rspec"
-require "laundry"
+require 'capybara/rspec'
+require 'laundry'
 
 FactoryGirl.definition_file_paths << File.join(File.dirname(__FILE__), 'factories')
 FactoryGirl.find_definitions
