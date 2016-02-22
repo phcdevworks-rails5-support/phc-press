@@ -9,5 +9,9 @@ Phcpress::Engine.routes.draw do
 	namespace :news do
 		resources :posts
 	end
+	
+	# Serve Out Pages
+	get 'website/pages/newspage', :path => "news"
+	get 'website/pages/blogpage', :path => "blog"
 
 end
