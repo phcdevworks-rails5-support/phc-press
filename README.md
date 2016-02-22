@@ -1,6 +1,5 @@
 [![security](https://hakiri.io/github/PHCNetworks/phc-press/master.svg)](https://hakiri.io/github/PHCNetworks/phc-press/master)
 [![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-press/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
-[![Build Status](https://travis-ci.org/PHCNetworks/phc-press.svg?branch=master)](https://travis-ci.org/PHCNetworks/phc-press)
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
   
 ### PHC-Press (Blog & News Post Engine) Documentation
@@ -13,7 +12,7 @@ PHC-Press add blog and news posting abilities to your ruby on rails powered webs
 
 #### Step 1 - Add PHCPress to your gemfile  
 
-	gem 'phcpress', '~> 0.4.5b'
+	gem 'phcpress', '~> 0.4.9b'
 	bundle exec install  
   
 #### Step 2 - Add PHCPress database migration files  
@@ -36,4 +35,3 @@ PHCPress UI requires bootstrap and fontawesome to operate.
   
 	rake assets:clobber
 	rake assets:precompile  
-
