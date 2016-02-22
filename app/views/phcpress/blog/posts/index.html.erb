@@ -3,7 +3,7 @@
 	<div class="panel panel-default">
 
 		<div class="panel-heading">
-			<i class="fa fa-newspaper-o"></i> Blog Post List
+			<i class="fa fa-pencil-square-o"></i> Blog Post List
 		</div>
 
 		<div class="panel-body">
@@ -26,9 +26,8 @@
 							<td><%= blog_post.blogpsttext %></td>
 							<td><%= blog_post.pststatus %></td>
 							<td><div class="btn-group" role="group" aria-label="Blog Articles">
-								<%= link_to 'Show', blog_post, class: "btn btn-primary btn-xs" %>
 								<%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-primary btn-xs" %>
-								<%= link_to 'Destroy', blog_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+								<%= link_to 'Trash', blog_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
 							</div></td>
 						</tr>
 					<% end %>
@@ -36,7 +35,7 @@
 
 			</table>
 
-			<%= link_to 'New Post', new_blog_post_path, class: "btn btn-primary" %>
+			<%= link_to 'New Blog Post', new_blog_post_path, class: "btn btn-primary" %>
 		</div>
 
 	</div>
