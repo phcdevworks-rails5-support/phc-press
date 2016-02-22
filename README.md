@@ -16,12 +16,17 @@ PHC-Press add blog and news posting abilities to your ruby on rails powered webs
 	gem 'phcpress', '~> 0.3.1b' 
 	bundle exec install  
   
-#### Step 2 - Mount the Engine in your Routes File  
+#### Step 2 - Add and migrate phcpress database tables  
+
+	rake railties:install:migrations  
+	rake db:migrate  
+  
+#### Step 3 - Mount the Engine in your Routes File  
 Mount the Engine in your Routes File (App must have Root route)  
   
 	mount Phcpress::Engine, :at => '/'  
   
-#### Step 3 - Generate Views  
+#### Step 4 - Generate Views  
 Generate views for customization and app integration.  
   
 	rails generate phcpress:views
