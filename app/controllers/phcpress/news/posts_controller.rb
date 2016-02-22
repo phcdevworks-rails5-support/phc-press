@@ -6,6 +6,7 @@ module Phcpress
 	class News::PostsController < ApplicationController
 
 		# Filters & Security
+		layout :layouts_resolver_application
 		before_action :set_news_post, only: [:edit, :update, :destroy]
 
 		# News Post Index (/news/posts)

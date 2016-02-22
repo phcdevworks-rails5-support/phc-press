@@ -1,42 +1,15 @@
-<!-- Main Content -->
-<div class="wrapper wrapper-content">
-	<div class="panel panel-default">
-
-		<div class="panel-heading">
-			<i class="fa fa-pencil-square-o"></i> Blog Post List
-		</div>
-
-		<div class="panel-body">
-
-			<table class="table table-bordered table-striped table-hover">
-
-				<thead>
-					<tr>
-						<th>BlogPage Title</th>
-						<th>BlogPage Text</th>
-						<th>BlogPage Status</th>
-						<th></th>
-					</tr>
-				</thead>
-
-				<tbody>
-					<% @blog_posts.each do |blog_post| %>
-						<tr>
-							<td><%= blog_post.blogpsttitle %></td>
-							<td><%= blog_post.blogpsttext %></td>
-							<td><%= blog_post.pststatus %></td>
-							<td><div class="btn-group" role="group" aria-label="Blog Articles">
-								<%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-primary btn-xs" %>
-								<%= link_to 'Trash', blog_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
-							</div></td>
-						</tr>
-					<% end %>
-				</tbody>
-
-			</table>
-
-			<%= link_to 'New Blog Post', new_blog_post_path, class: "btn btn-primary" %>
-		</div>
-
+<!-- Start Main Content -->
+<div class="row">
+	<!-- Start Blog Post Content Column -->
+	<div class="col-lg-8">
+		<% @blog_posts.each do |blog_post| %>
+			<article>
+				<td><%= blog_post.blogpsttitle %></td>
+				<td><%= blog_post.blogpsttext %></td>
+				<td><%= blog_post.pststatus %></td>
+			</article>
+		<% end %>
 	</div>
+	<!-- End Blog Post Content Column -->
 </div>
+<!-- End Main Content -->
