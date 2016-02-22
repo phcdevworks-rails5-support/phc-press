@@ -30,3 +30,10 @@ Mount the Engine in your Routes File (App must have Root route)
 Generate views for customization and app integration.  
   
 	rails generate phcpress:views
+
+#### Step 5 - Recompile Assets
+PHCPress UI requires bootstrap and fontawesome to operate.
+  
+	rake assets:clobber
+	rake assets:precompile  
+
