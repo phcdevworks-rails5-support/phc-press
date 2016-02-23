@@ -20,7 +20,7 @@
 					<% @news_posts.each do |news_post| %>
 						<tr>
 							<td><%= news_post.newspsttitle %></td>
-							<td><%= news_post.newspsttext %></td>
+							<td><%= truncate(news_post.newspsttext, :length => 80) %></td>
 							<td><%= news_post.pststatus %></td>
 							<td><div class="btn-group" role="group" aria-label="News Articles">
 								<%= link_to 'Show', news_post, class: "btn btn-primary btn-xs" %>

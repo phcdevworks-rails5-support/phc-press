@@ -23,7 +23,7 @@
 					<% @blog_posts.each do |blog_post| %>
 						<tr>
 							<td><%= blog_post.blogpsttitle %></td>
-							<td><%= blog_post.blogpsttext %></td>
+							<td><%= truncate(blog_post.blogpsttext, :length => 80) %></td>
 							<td><%= blog_post.pststatus %></td>
 							<td><div class="btn-group" role="group" aria-label="Blog Articles">
 								<%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-primary btn-xs" %>
