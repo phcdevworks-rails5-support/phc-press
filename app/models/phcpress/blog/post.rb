@@ -17,9 +17,9 @@ module Phcpress
 
 		# Set Image URL Path
 		:url => "/images/:id/:style/:filename",
-
-		# Todo: Change
-		default_url: "/images/:style/missing.png"
+		
+		# Image Hashing
+		:hash_secret => ENV[PHCPRESS_IMAGE_HASH]
 
 		# Validate Images Only
 		validates_attachment_content_type :pstimage, content_type: /\Aimage\/.*\Z/
