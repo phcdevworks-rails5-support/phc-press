@@ -22,7 +22,8 @@ Gem::Specification.new do |s|
 	s.add_dependency 'rails', '~> 4.2', '>= 4.2.5.1'
 	
 	# Upload & Media Dependencies
-	s.add_dependency 'paperclip', "~> 4.3"
+	s.add_dependency 'carrierwave', '~> 0.10.0'
+	s.add_dependency 'rmagick', '~> 2.15', '>= 2.15.4'
 
 	# UI & Frontend Elements
 	s.add_dependency 'jquery-rails', '~> 4.0', '>= 4.0.5'

@@ -1,9 +1,12 @@
-# Load Requried Dependecies
+# Load UI Dependecies
 require 'jquery-rails'
 require 'sass-rails'
 require 'bootstrap-sass'
 require 'font-awesome-rails'
-require 'paperclip'
+
+# Load Image Processing
+require 'carrierwave'
+require 'rmagick'
 
 module Phcpress
 	class Engine < ::Rails::Engine
