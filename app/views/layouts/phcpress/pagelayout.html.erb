@@ -13,8 +13,8 @@
 	<body>
 
 		<!-- Start Navigation -->
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
@@ -37,7 +37,15 @@
 		<!-- Start Content -->
 		<div class="container">
 			<%= render 'layouts/phcpress/notifications' %>
-			<%= yield %>
+			<!-- Start Main Content -->
+			<div class="row">
+				<!-- Start Blog Post Content Column -->
+				<div class="col-lg-8">
+					<%= yield %>
+				</div>
+				<!-- End Blog Post Content Column -->
+			</div>
+			<!-- End Main Content -->
 		</div>
 		<!-- End Content -->
 
