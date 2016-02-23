@@ -12,7 +12,6 @@
 						<th>Post Name</th>
 						<th>Post Text</th>
 						<th>Post Status</th>
-						<th>Featured Image</th>
 						<th></th>
 					</tr>
 				</thead>
@@ -23,7 +22,6 @@
 							<td><%= news_post.newspsttitle %></td>
 							<td><%= truncate(news_post.newspsttext, :length => 80) %></td>
 							<td><%= news_post.pststatus %></td>
-							<td><%= image_tag blog_post.pstimage.url %></td>
 							<td><div class="btn-group" role="group" aria-label="News Articles">
 								<%= link_to 'Edit', edit_news_post_path(news_post), class: "btn btn-primary btn-xs" %>
 								<%= link_to 'Destroy', news_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
