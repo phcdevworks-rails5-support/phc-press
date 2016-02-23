@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 	s.email       = ["brad.potts@phcnetworks.net"]
 	s.homepage    = "http://www.phcnetworks.net"
 	s.summary     = "News & Blog Posts Engine for Ruby on Rails"
-	s.description = "(UNDER DEVELOPMENT) A customizable engine for simple news and blog posts."
+	s.description = "PHCPress is a simple news and blog posting engine for your ruby on rails powered app or website."
 	s.license     = "MIT"
 
 	s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
