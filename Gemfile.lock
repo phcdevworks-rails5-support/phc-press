@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcpress (0.5.11b)
+    phcpress (0.6.0)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       font-awesome-rails (~> 4.5)
       jquery-rails (~> 4.0, >= 4.0.5)
@@ -167,7 +167,7 @@ GEM
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.0.1)
+    sprockets-rails (3.0.2)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)

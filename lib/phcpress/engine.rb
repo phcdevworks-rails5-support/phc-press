@@ -6,8 +6,11 @@ require 'font-awesome-rails'
 
 module Phcpress
 	class Engine < ::Rails::Engine
+
+		# Give Everything a Namespace
 		isolate_namespace Phcpress
 
+		# Testing Generator
 		config.generators do |g|
 			g.test_framework :rspec,
 			fixtures: true,
@@ -18,9 +21,10 @@ module Phcpress
 			request_specs: false
 			g.fixture_replacement :factory_girl, dir: "spec/factories"
 		end
-		
+
+		# Load PHCPress Helper Files (Prevents Problems)
 		config.to_prepare do
-		  ApplicationController.helper(ApplicationHelper)
+			ApplicationController.helper(ApplicationHelper)
 		end
 
 	end
