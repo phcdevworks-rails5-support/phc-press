@@ -22,10 +22,7 @@
 				<div class="panel-body">
 					<div class="form-group">
 						<label><%= f.label :pstimage, "Featured Image" %></label>
-						<%= f.file_field :pstimage %>
-					</div>
-					<div class="actions">
-						<%= f.submit "Publish Blog Article", class: "btn btn-primary btn-sm" %>
+						<%= f.file_field :pstimage, class: "form-control" %>
 					</div>
 				</div>
 			</div>

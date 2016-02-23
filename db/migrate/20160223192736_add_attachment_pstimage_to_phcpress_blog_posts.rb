@@ -11,4 +11,5 @@ class AddAttachmentPstimageToPhcpressBlogPosts < ActiveRecord::Migration
 	def self.down
 		remove_attachment :phcpress_blog_posts, :pstimage
 	end
+
 end
