@@ -18,7 +18,10 @@ module Phcpress
 			request_specs: false
 			g.fixture_replacement :factory_girl, dir: "spec/factories"
 		end
-
+		
+		config.to_prepare do
+		  ApplicationController.helper(MyEngineHelper)
+		end
 
 	end
 end
