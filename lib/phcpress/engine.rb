@@ -20,7 +20,7 @@ module Phcpress
 		end
 		
 		config.to_prepare do
-		  ApplicationController.helper(MyEngineHelper)
+		  ApplicationController.helper(ApplicationHelper)
 		end
 
 	end
