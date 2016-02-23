@@ -3,6 +3,7 @@ require 'jquery-rails'
 require 'sass-rails'
 require 'bootstrap-sass'
 require 'font-awesome-rails'
+require 'paperclip'
 
 module Phcpress
 	class Engine < ::Rails::Engine
