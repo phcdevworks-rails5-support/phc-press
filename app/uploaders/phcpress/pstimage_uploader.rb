@@ -9,13 +9,6 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 	storage :file
 	# storage :fog
 
-	# Process Images
-	process resize_to_limit: [1500,1500]
-
-	version :thumb do
-		process resize_to_fill: [250,250]
-	end
-
 	# Where files will be uploaded
 	def store_dir
 		"uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
