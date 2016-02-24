@@ -18,15 +18,6 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 	def extension_white_list
 		%w(jpg jpeg gif png)
 	end
-
-	# Upload Different Image Sizes
-	version :thumb do
-		process resize_to_fill: [250, 250]
-	end
-
-	version :large do
-		process resize_to_fill: [850, 650]
-	end
 	
 	# Hash filenames
 	def filename
