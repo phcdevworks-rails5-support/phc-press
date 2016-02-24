@@ -20,8 +20,29 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 		"#{secure_token}.#{file.extension}" if original_filename.present?
 	end
 
+	# White List of Safe Extension
 	def extension_white_list
 		%w(jpg jpeg gif png)
+	end
+
+	# Upload Different Image Sizes
+	version :thubnail do
+		process :resize_to_limit => [250, 250]
+	end
+
+	version :large do
+		process :resize_to_limit => [850, 650]
+	end
+
+	version :medium do
+		process :resize_to_limit => [500, 400]
+	end
+
+	version :slimwide do
+		process :resize_to_limit => [1040, 450]
+	end
+
+	version :orginal do
 	end
 
 	protected
@@ -31,23 +52,5 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 		var = :"@#{mounted_as}_secure_token"
 		model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
 	end
-
-	# Process files as they are uploaded:
-	# process :scale => [200, 300]
-	#
-	# def scale(width, height)
-	#   # do something
-	# end
-
-	# Create different versions of your uploaded files:
-	# version :thumb do
-	#   process :resize_to_fit => [50, 50]
-	# end
-
-	# Override the filename of the uploaded files:
-	# Avoid using model.id or version_name here, see uploader/store.rb for details.
-	# def filename
-	#   "something.jpg" if original_filename
-	# end
 
 end
