@@ -30,8 +30,11 @@ Generate views for customization and app integration.
   
 	rails generate phcpress:views
 
-#### Step 5 - Recompile Assets
-PHCPress UI requires bootstrap and fontawesome to operate.
+#### Step 5 - Recompile Assets  
+PHCPress UI requires bootstrap and fontawesome to operate.  
   
 	rake assets:clobber
 	rake assets:precompile  
+
+#### Step 5 - Setup Carrierwave (Image Uploads)  
+On read only file systems carrierwave may need additional setup.  
