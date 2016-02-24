@@ -42,9 +42,6 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 		process :resize_to_fit => [1040, 450]
 	end
 
-	version :orginal do
-	end
-
 	protected
 
 	# Secure Token for File Hashing
