@@ -1,7 +1,8 @@
 module Phcpress
 	class Blog::Post < ActiveRecord::Base
 
-		mount_uploader :image, Phcpress::PstimageUploader
+		attr_accessible :pstimage
+		mount_uploader :pstimage, Phcpress::PstimageUploader
 
 	end
 end
