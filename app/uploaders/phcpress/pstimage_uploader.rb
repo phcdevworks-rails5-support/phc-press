@@ -4,7 +4,7 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 
 	# Include RMagick or MiniMagick support:
 	# include CarrierWave::RMagick
-	# include CarrierWave::MiniMagick
+	include CarrierWave::MiniMagick
 
 	# Storage Type
 	storage :file
