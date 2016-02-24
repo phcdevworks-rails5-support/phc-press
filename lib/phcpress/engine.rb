@@ -6,7 +6,7 @@ require 'font-awesome-rails'
 
 # Load Image Processing
 require 'carrierwave'
-#require 'rmagick'
+require 'mini_magick'
 
 module Phcpress
 	class Engine < ::Rails::Engine
