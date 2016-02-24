@@ -27,19 +27,19 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 
 	# Upload Different Image Sizes
 	version :thubnail do
-		process :resize_to_fit => [250, 250]
+		process resize_to_fill: [250, 250]
 	end
 
 	version :large do
-		process :resize_to_fit => [850, 650]
+		process resize_to_fill: [850, 650]
 	end
 
 	version :medium do
-		process :resize_to_fit => [500, 400]
+		process resize_to_fill: [500, 400]
 	end
 
 	version :slimwide do
-		process :resize_to_fit => [1040, 450]
+		process resize_to_fill: [1040, 450]
 	end
 
 	protected
