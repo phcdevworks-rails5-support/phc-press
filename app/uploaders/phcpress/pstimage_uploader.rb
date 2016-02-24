@@ -2,8 +2,7 @@
 
 class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 
-	# Include RMagick or MiniMagick support:
-	# include CarrierWave::RMagick
+	# Include MiniMagick
 	include CarrierWave::MiniMagick
 
 	# Storage Type
@@ -12,12 +11,7 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 
 	# Where files will be uploaded
 	def store_dir
-		"uploads/#{model.class.to_s.underscore}/#{mounted_as}/"
-	end
-
-	# Hash filenames
-	def filename
-		"#{secure_token}.#{file.extension}" if original_filename.present?
+		"uploads/#{model.class.to_s.underscore}/#{mounted_as}}/#{model.id}"
 	end
 
 	# White List of Safe Extension
@@ -26,20 +20,17 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 	end
 
 	# Upload Different Image Sizes
-	version :thubnail do
+	version :thumb do
 		process resize_to_fill: [250, 250]
 	end
 
 	version :large do
 		process resize_to_fill: [850, 650]
 	end
-
-	version :medium do
-		process resize_to_fill: [500, 400]
-	end
-
-	version :slimwide do
-		process resize_to_fill: [1040, 450]
+	
+	# Hash filenames
+	def filename
+		"#{secure_token}.#{file.extension}" if original_filename.present?
 	end
 
 	protected
