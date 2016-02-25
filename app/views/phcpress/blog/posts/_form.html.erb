@@ -24,7 +24,7 @@
 						<label><%= f.label :pstimage, "Featured Image" %></label>
 						<%= f.file_field :pstimage, class: "form-control" %>
 					</div>
-					<%= image_tag(@blog_post.pstimage, class: "img-responsive img-thumbnail") %>
+					<%= image_tag(@blog_post.pstimage_url, class: "img-responsive img-thumbnail") %>
 				</div>
 			</div>
 		</div>

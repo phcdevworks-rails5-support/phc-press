@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 
 	# Storage Type
