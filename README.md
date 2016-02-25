@@ -5,14 +5,14 @@
 ### PHC-Press (Blog & News Post Engine) Documentation
 PHC-Press add blog and news posting abilities to your ruby on rails powered website or application.
 
-* Seperate News & Blog Sections
+* Separate News & Blog Sections
 * Highly Customizable
 * Easy Integration into Projects  
 
 
 #### Step 1 - Add PHCPress to your gemfile  
 
-	gem 'phcpress', '~> 0.9.7'
+	gem 'phcpress', '~> 0.11.0'
 	bundle exec install  
   
 #### Step 2 - Add PHCPress database migration files  
@@ -37,4 +37,7 @@ PHCPress UI requires bootstrap and fontawesome to operate.
 	rake assets:precompile  
 
 #### Step 5 - Setup Carrierwave (Image Uploads)  
-On read only file systems carrierwave may need additional setup.  
+PHCPress default Carrierwave settings can be overwritten (suggested).  
+  
+- [How to Override PHCPress Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader---Override)
+- [How to Override - Cloudinary Example](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary))
