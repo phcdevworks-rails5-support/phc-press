@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcpress (0.10.10)
+    phcpress (0.11.0)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       carrierwave (~> 0.10.0)
       font-awesome-rails (~> 4.5)
