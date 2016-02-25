@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
 	
 	# Upload & Media Dependencies
 	s.add_dependency 'carrierwave', '~> 0.10.0'
-	s.add_dependency 'mini_magick', '~> 4.4'
 
 	# UI & Frontend Elements
 	s.add_dependency 'jquery-rails', '~> 4.0', '>= 4.0.5'

@@ -2,9 +2,6 @@
 
 class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 
-	# Include MiniMagick
-	include CarrierWave::MiniMagick
-
 	# Storage Type
 	storage :file
 	# storage :fog
