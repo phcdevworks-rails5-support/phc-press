@@ -12,7 +12,7 @@ PHC-Press add blog and news posting abilities to your ruby on rails powered webs
 
 #### Step 1 - Add PHCPress to your gemfile  
 
-	gem 'phcpress', '~> 0.11.0'
+	gem 'phcpress', '~> 0.11.1'
 	bundle exec install  
   
 #### Step 2 - Add PHCPress database migration files  
