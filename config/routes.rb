@@ -13,5 +13,8 @@ Phcpress::Engine.routes.draw do
 	# Serve Out Pages
 	get 'website/pages/newspage', :path => "news"
 	get 'website/pages/blogpage', :path => "blog"
+	
+	# Mount PHCEngines
+	mount Phcnotifi::Engine, :at => '/'
 
 end

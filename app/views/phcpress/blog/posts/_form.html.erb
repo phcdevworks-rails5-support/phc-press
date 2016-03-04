@@ -1,5 +1,9 @@
 <div class="row">
 	<%= form_for(@blog_post, :html => {:multipart => true}) do |f| %>
+	
+		<!-- PHC-Notifi Render Validation -->
+		<%= render 'layouts/phcnotifi/components/validations', :object => @blog_post %>
+	
 		<div class="col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -49,5 +53,6 @@
 				</div>
 			</div>
 		</div>
+
 	<% end %>
 </div>

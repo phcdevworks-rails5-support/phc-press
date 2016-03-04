@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 	s.email       = ["brad.potts@phcnetworks.net"]
 	s.homepage    = "http://www.phcnetworks.net"
 	s.summary     = "News & Blog Posts Engine for Ruby on Rails"
-	s.description = "PHCPress is a simple news and blog posting engine for your ruby on rails powered site."
+	s.description = "PHC-Press is a simple news and blog posting engine for your ruby on rails powered site."
 	s.license     = "GPL-3.0"
 
 	s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
 	s.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 	s.add_dependency 'font-awesome-rails', '~> 4.5'
 	s.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
+	s.add_dependency 'phcnotifi', '~> 0.2.5'
 	
 	# Development & Testing Dependencies
 	s.add_development_dependency 'sqlite3', '~> 1.3'
