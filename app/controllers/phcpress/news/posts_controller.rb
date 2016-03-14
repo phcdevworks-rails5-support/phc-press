@@ -21,7 +21,7 @@ module Phcpress
 
 		# Create a New News Post (/news/posts/new)
 		def new
-			@news_post = News::Post.new
+			@news_post = News::Post.scoped_to(current_account).new
 		end
 
 		# Edit News Post /news/posts/1/edit
