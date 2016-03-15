@@ -12,11 +12,6 @@ module Phcpress
 		# Load Image Processing
 		require 'carrierwave'
 
-		# Load PHCPress Helper Files
-		class ApplicationController < ActionController::Base
-			helper Phcpress::Engine.helpers
-		end
-
 		# Give Everything a Namespace
 		isolate_namespace Phcpress
 
