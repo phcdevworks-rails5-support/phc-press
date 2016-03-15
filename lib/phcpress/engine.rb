@@ -29,7 +29,7 @@ module Phcpress
 		
 		# Load Engine Helper Files
 		config.to_prepare do
-			ApplicationController.helpers
+			ApplicationController.helper(ApplicationHelper)
 		end
 
 	end
