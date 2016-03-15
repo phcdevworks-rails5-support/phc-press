@@ -17,7 +17,7 @@ PHC-Press add blog and news posting abilities to your ruby on rails powered webs
   
 #### Step 2 - Add PHCPress database migration files  
 
-	rake railties:install:migrations  
+	rake phcpress:install:migrations 
 	rake db:migrate  
   
 #### Step 3 - Mount the Engine in your Routes File  

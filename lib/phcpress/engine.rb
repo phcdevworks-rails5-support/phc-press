@@ -26,11 +26,6 @@ module Phcpress
 			request_specs: false
 			g.fixture_replacement :factory_girl, dir: "spec/factories"
 		end
-		
-		# Load Engine Helper Files
-		config.to_prepare do
-			helper Phcpress::Engine.helpers
-		end
 
 	end
 end
