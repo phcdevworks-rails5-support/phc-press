@@ -1,12 +1,10 @@
 module Phcpress
 	class ApplicationController < ActionController::Base
 
+		# Load Helper Files
+		helper Phcpress::Engine.helpers
+
 		private
-		
-		# Load PHCPress Helper Files
-		class ApplicationController < ActionController::Base
-			helper Phcpress::Engine.helpers
-		end
 
 		# Resolve Application Layouts
 		def layouts_resolver_application
