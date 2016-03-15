@@ -3,7 +3,7 @@ module Phcpress
 
 		# Load UI Dependecies
 		require 'jquery-rails'
-		require 'phcnotifi';
+		require 'phcnotifi'
 
 		require 'sass-rails'
 		require 'bootstrap-sass'
@@ -11,6 +11,11 @@ module Phcpress
 		
 		# Load Image Processing
 		require 'carrierwave'
+
+		# Load PHCPress Helper Files
+		class ApplicationController < ActionController::Base
+			helper Phcpress::Engine.helpers
+		end
 
 		# Give Everything a Namespace
 		isolate_namespace Phcpress
