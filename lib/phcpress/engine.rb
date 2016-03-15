@@ -27,10 +27,5 @@ module Phcpress
 			g.fixture_replacement :factory_girl, dir: "spec/factories"
 		end
 
-		# Load PHCPress Helper Files (Prevents Problems)
-		class ApplicationController < ActionController::Base
-			helper Phcpress::Engine.helpers
-		end
-
 	end
 end
