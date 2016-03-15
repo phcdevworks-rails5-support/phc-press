@@ -1,5 +1,6 @@
 # Load UI Dependecies
 require 'jquery-rails'
+require 'phcnotifi';
 require 'sass-rails'
 require 'bootstrap-sass'
 require 'font-awesome-rails'
