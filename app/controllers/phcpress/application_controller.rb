@@ -1,9 +1,6 @@
 module Phcpress
 	class ApplicationController < ActionController::Base
 
-		# Load Helper Files
-		helper Phcpress::Engine.helpers
-
 		private
 
 		# Resolve Application Layouts
