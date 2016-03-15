@@ -1,15 +1,16 @@
-# Load UI Dependecies
-require 'jquery-rails'
-require 'phcnotifi';
-require 'sass-rails'
-require 'bootstrap-sass'
-require 'font-awesome-rails'
-
-# Load Image Processing
-require 'carrierwave'
-
 module Phcpress
 	class Engine < ::Rails::Engine
+
+		# Load UI Dependecies
+		require 'jquery-rails'
+		require 'phcnotifi';
+
+		require 'sass-rails'
+		require 'bootstrap-sass'
+		require 'font-awesome-rails'
+		
+		# Load Image Processing
+		require 'carrierwave'
 
 		# Give Everything a Namespace
 		isolate_namespace Phcpress
@@ -27,8 +28,8 @@ module Phcpress
 		end
 
 		# Load PHCPress Helper Files (Prevents Problems)
-		config.to_prepare do
-			ApplicationController.helper(ApplicationHelper)
+		class ApplicationController < ActionController::Base
+			helper Phcpress::Engine.helpers
 		end
 
 	end

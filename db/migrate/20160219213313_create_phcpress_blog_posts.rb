@@ -6,6 +6,8 @@ class CreatePhcpressBlogPosts < ActiveRecord::Migration
 			t.text :blogpsttext
 			t.string :pststatus
 
+			t.integer :user_id
+
 			t.timestamps null: false
 
 		end
