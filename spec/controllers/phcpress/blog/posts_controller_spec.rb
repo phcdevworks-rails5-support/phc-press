@@ -19,22 +19,28 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 module Phcpress
-	RSpec.describe Blog::PostsController, type: :controller do
+  RSpec.describe Blog::PostsController, type: :controller do
 
-	# Define Fields to be Posted
-	let(:valid_attributes) { 
-		attributes_for() 
-	}
+    # This should return the minimal set of attributes required to create a valid
+    # Blog::Post. As you add validations to Blog::Post, be sure to
+    # adjust the attributes here as well.
+    let(:valid_attributes) {
+      skip("Add a hash of attributes valid for your model")
+    }
 
-	# Define Fields to Update Record
-	let(:invalid_attributes) {
-		skip("Add a hash of attributes invalid for your model")
-	}
+    let(:invalid_attributes) {
+      skip("Add a hash of attributes invalid for your model")
+    }
+
+    # This should return the minimal set of values that should be in the session
+    # in order to pass any filters (e.g. authentication) defined in
+    # Blog::PostsController. Be sure to keep this updated too.
+    let(:valid_session) { {} }
 
     describe "GET #index" do
       it "assigns all blog_posts as @blog_posts" do
         post = Blog::Post.create! valid_attributes
-        get :index, {}
+        get :index, {}, valid_session
         expect(assigns(:blog_posts)).to eq([post])
       end
     end
@@ -42,14 +48,14 @@ module Phcpress
     describe "GET #show" do
       it "assigns the requested blog_post as @blog_post" do
         post = Blog::Post.create! valid_attributes
-        get :show, {:id => post.to_param}
+        get :show, {:id => post.to_param}, valid_session
         expect(assigns(:blog_post)).to eq(post)
       end
     end
 
     describe "GET #new" do
       it "assigns a new blog_post as @blog_post" do
-        get :new, {}
+        get :new, {}, valid_session
         expect(assigns(:blog_post)).to be_a_new(Blog::Post)
       end
     end
@@ -57,7 +63,7 @@ module Phcpress
     describe "GET #edit" do
       it "assigns the requested blog_post as @blog_post" do
         post = Blog::Post.create! valid_attributes
-        get :edit, {:id => post.to_param}
+        get :edit, {:id => post.to_param}, valid_session
         expect(assigns(:blog_post)).to eq(post)
       end
     end
@@ -66,30 +72,30 @@ module Phcpress
       context "with valid params" do
         it "creates a new Blog::Post" do
           expect {
-            post :create, {:blog_post => valid_attributes}
+            post :create, {:blog_post => valid_attributes}, valid_session
           }.to change(Blog::Post, :count).by(1)
         end
 
         it "assigns a newly created blog_post as @blog_post" do
-          post :create, {:blog_post => valid_attributes}
+          post :create, {:blog_post => valid_attributes}, valid_session
           expect(assigns(:blog_post)).to be_a(Blog::Post)
           expect(assigns(:blog_post)).to be_persisted
         end
 
         it "redirects to the created blog_post" do
-          post :create, {:blog_post => valid_attributes}
+          post :create, {:blog_post => valid_attributes}, valid_session
           expect(response).to redirect_to(Blog::Post.last)
         end
       end
 
       context "with invalid params" do
         it "assigns a newly created but unsaved blog_post as @blog_post" do
-          post :create, {:blog_post => invalid_attributes}
+          post :create, {:blog_post => invalid_attributes}, valid_session
           expect(assigns(:blog_post)).to be_a_new(Blog::Post)
         end
 
         it "re-renders the 'new' template" do
-          post :create, {:blog_post => invalid_attributes}
+          post :create, {:blog_post => invalid_attributes}, valid_session
           expect(response).to render_template("new")
         end
       end
@@ -103,20 +109,20 @@ module Phcpress
 
         it "updates the requested blog_post" do
           post = Blog::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :blog_post => new_attributes}
+          put :update, {:id => post.to_param, :blog_post => new_attributes}, valid_session
           post.reload
           skip("Add assertions for updated state")
         end
 
         it "assigns the requested blog_post as @blog_post" do
           post = Blog::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :blog_post => valid_attributes}
+          put :update, {:id => post.to_param, :blog_post => valid_attributes}, valid_session
           expect(assigns(:blog_post)).to eq(post)
         end
 
         it "redirects to the blog_post" do
           post = Blog::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :blog_post => valid_attributes}
+          put :update, {:id => post.to_param, :blog_post => valid_attributes}, valid_session
           expect(response).to redirect_to(post)
         end
       end
@@ -124,13 +130,13 @@ module Phcpress
       context "with invalid params" do
         it "assigns the blog_post as @blog_post" do
           post = Blog::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :blog_post => invalid_attributes}
+          put :update, {:id => post.to_param, :blog_post => invalid_attributes}, valid_session
           expect(assigns(:blog_post)).to eq(post)
         end
 
         it "re-renders the 'edit' template" do
           post = Blog::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :blog_post => invalid_attributes}
+          put :update, {:id => post.to_param, :blog_post => invalid_attributes}, valid_session
           expect(response).to render_template("edit")
         end
       end
@@ -140,13 +146,13 @@ module Phcpress
       it "destroys the requested blog_post" do
         post = Blog::Post.create! valid_attributes
         expect {
-          delete :destroy, {:id => post.to_param}
+          delete :destroy, {:id => post.to_param}, valid_session
         }.to change(Blog::Post, :count).by(-1)
       end
 
       it "redirects to the blog_posts list" do
         post = Blog::Post.create! valid_attributes
-        delete :destroy, {:id => post.to_param}
+        delete :destroy, {:id => post.to_param}, valid_session
         expect(response).to redirect_to(blog_posts_url)
       end
     end

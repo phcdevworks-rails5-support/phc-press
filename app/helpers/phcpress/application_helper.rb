@@ -1,4 +1,4 @@
 module Phcpress
-	module ApplicationHelper
-	end
+  module ApplicationHelper
+  end
 end

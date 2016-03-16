@@ -1,6 +1,6 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-# Gem Versioning
+# Maintain your gem's version:
 require "phcpress/version"
 
 # Gem and Engine Specifications
@@ -10,12 +10,12 @@ Gem::Specification.new do |s|
 	s.version     = Phcpress::VERSION
 	s.authors     = ["BradPotts"]
 	s.email       = ["brad.potts@phcnetworks.net"]
-	s.homepage    = "http://www.phcnetworks.net"
+	s.homepage    = "http://www.phcnetworks.net/engineyard"
 	s.summary     = "News & Blog Posts Engine for Ruby on Rails"
-	s.description = "PHC-Press is a news and blog posting engine for ruby on rails apps. It is setup for use with Devise User as an authour."
+	s.description = "PHC-Press is a news and blog posting engine is opensource and documented but custom built for PHCPress rails application."
 	s.license     = "GPL-3.0"
 
-	s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
+	s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
 	# Main Dependencies
 	s.add_dependency 'rails', '~> 4.2', '>= 4.2.5.1'

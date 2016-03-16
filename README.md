@@ -3,9 +3,8 @@
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
   
 ### PHC-Press (Blog & News Post Engine) Documentation
-PHC-Press add blog and news posting abilities to your ruby on rails powered website or application.
+PHC-Press is a news and blog posting engine is opensource but custom built for PHCPress rails application (our changes may break your app).
 
-* Separate News & Blog Sections
 * Highly Customizable
 * Easy Integration into Projects  
 
