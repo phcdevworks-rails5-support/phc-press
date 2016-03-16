@@ -30,7 +30,6 @@ module Phcpress
 		# Load Helper Files
 		config.to_prepare do
 			ApplicationController.helper(ApplicationHelper)
-			Mtdevise::ApplicationController.helper
 		end
 
 	end
