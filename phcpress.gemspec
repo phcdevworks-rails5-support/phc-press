@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 	s.email       = ["brad.potts@phcnetworks.net"]
 	s.homepage    = "http://www.phcnetworks.net/engineyard"
 	s.summary     = "News & Blog Posts Engine for Ruby on Rails"
-	s.description = "PHC-Press is a news and blog posting engine is opensource and documented but custom built for PHCPress rails application."
+	s.description = "PHC-Press is a news and blog posting engine opensource and built specifically for PHCPress rails application."
 	s.license     = "GPL-3.0"
 
 	s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
