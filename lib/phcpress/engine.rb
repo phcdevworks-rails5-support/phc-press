@@ -30,6 +30,8 @@ module Phcpress
 		# Load Helper Files
 		config.to_prepare do
 			ApplicationController.helper(ApplicationHelper)
+			ApplicationController.helper(Blog::PostsHelper)
+			ApplicationController.helper(News::PostsHelper)
 		end
 
 	end
