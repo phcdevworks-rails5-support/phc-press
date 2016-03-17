@@ -42,5 +42,6 @@ Gem::Specification.new do |spec|
 
 	spec.add_development_dependency 'faker', '~> 1.6'
 	spec.add_development_dependency 'selenium-webdriver', '~> 2.52'
+	spec.add_development_dependency 'codeclimate-test-reporter', '~> 0.5.0'
 
 end
