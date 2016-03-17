@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
 	spec.description = "PHC-Press is an open source news and blog posting engine purpose built for PHCPress application."
 	spec.license     = "GPL-3.0"
 
-	spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
 	# Main Dependencies
 	spec.add_dependency 'rails', '~> 4.2', '>= 4.2.5.1'
@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 	spec.add_dependency 'font-awesome-rails', '~> 4.5'
 	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
-	spec.add_dependency 'phcnotifi', '~> 0.3.5'
+	spec.add_dependency 'phcnotifi', '~> 0.4.0'
 	
 	# Development & Testing Dependencies
 	spec.add_development_dependency 'sqlite3', '~> 1.3'
