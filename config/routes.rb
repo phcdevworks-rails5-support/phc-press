@@ -1,8 +1,13 @@
 Phcpress::Engine.routes.draw do
-  namespace :blog do
-    resources :posts
-  end
-  namespace :news do
-    resources :posts
-  end
+
+	# Blog Routes
+	namespace :blog do
+		resources :posts
+	end
+
+	# News Routes
+	namespace :news do
+		resources :posts
+	end
+
 end
