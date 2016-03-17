@@ -1,17 +1,14 @@
 [![security](https://hakiri.io/github/PHCNetworks/phc-press/master.svg)](https://hakiri.io/github/PHCNetworks/phc-press/master)
 [![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-press/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
+[![Issue Count](https://codeclimate.com/github/PHCNetworks/phc-press/badges/issue_count.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
   
 ### PHC-Press (Blog & News Post Engine) Documentation
-PHC-Press is a news and blog posting engine is opensource but custom built for PHCPress rails application (our changes may break your app).
-
-* Highly Customizable
-* Easy Integration into Projects  
-
-
+PHC-Press is an opensource news and blog posting engine built for PHCPress application. 
+  
 #### Step 1 - Add PHCPress to your gemfile  
 
-	gem 'phcpress', '~> 0.11.1'
+	gem 'phcpress', '~> 2.6', '>= 2.6.6'  
 	bundle exec install  
   
 #### Step 2 - Add PHCPress database migration files  
@@ -19,23 +16,13 @@ PHC-Press is a news and blog posting engine is opensource but custom built for P
 	rake phcpress:install:migrations 
 	rake db:migrate  
   
-#### Step 3 - Mount the Engine in your Routes File  
-Mount the Engine in your Routes File (App must have Root route)  
-  
-	mount Phcpress::Engine, :at => '/'  
-  
-#### Step 4 - Generate Views  
-Generate views for customization and app integration.  
-  
-	rails generate phcpress:views
-
-#### Step 5 - Recompile Assets  
+#### Step 3 - Recompile Assets  
 PHCPress UI requires bootstrap and fontawesome to operate.  
   
 	rake assets:clobber
 	rake assets:precompile  
 
-#### Step 5 - Setup Carrierwave (Image Uploads)  
+#### Step 4 - Setup Carrierwave (Image Uploads)  
 PHCPress default Carrierwave settings can be overwritten (suggested).  
   
 - [How to Override PHCPress Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader---Override)
