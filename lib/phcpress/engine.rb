@@ -33,6 +33,13 @@ module Phcpress
 			ApplicationController.helper(Blog::PostsHelper)
 			ApplicationController.helper(News::PostsHelper)
 		end
+		
+		# Auto Mount Plugin
+		initializer "phcpress", before: :load_config_initializers do |app|
+			Rails.application.routes.append do
+				mount Phcpress::Engine, at: "/"
+			end
+		end
 
 	end
 end
