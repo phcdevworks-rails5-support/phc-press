@@ -4,7 +4,7 @@
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
   
 ### PHC-Press (Blog & News Post Engine) Documentation
-PHC-Press is an opensource news and blog posting engine built for PHCPress application. 
+PHC-Press is an opensource news and blog posting engine purpose built for PHCPress application.  
   
 #### Step 1 - Add PHCPress to your gemfile  
 
