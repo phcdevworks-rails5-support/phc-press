@@ -1,3 +1,4 @@
+# This migration comes from phcpress (originally 20160316131626)
 class CreatePhcpressNewsPosts < ActiveRecord::Migration
 	def change
 		create_table :phcpress_news_posts do |t|
