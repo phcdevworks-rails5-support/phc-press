@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
 	spec.authors     = ["BradPotts"]
 	spec.email       = ["info@phcnetworks.net"]
 	spec.homepage    = "http://www.phcnetworks.net/engine-yard"
-	spec.summary     = "News & Blog Posts Engine for Ruby on Rails"
-	spec.description = "PHC-Press is an open source news and blog posting engine purpose built for PHCPress application."
+	spec.summary     = "News & Blog Posts Engin"
+	spec.description = "PHCPress is an open source news & blog posting engine purpose built for PHCPress application."
 	spec.license     = "GPL-3.0"
 
 	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
