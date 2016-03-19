@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 	spec.add_dependency 'font-awesome-rails', '~> 4.5'
 	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
-	spec.add_dependency 'phcnotifi', '~> 0.4.8'
+	spec.add_dependency 'phcnotifi', '~> 1.0'
 	
 	# Development & Testing Dependencies
 	spec.add_development_dependency 'sqlite3', '~> 1.3'
