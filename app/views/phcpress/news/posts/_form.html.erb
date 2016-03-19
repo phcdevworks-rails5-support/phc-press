@@ -2,7 +2,7 @@
 	<%= form_for(@news_post, :html => {:multipart => true})  do |f| %>
 	
 		<!-- PHC-Notifi Render Validation -->
-		<%= render 'layouts/phcnotifi/components/validations', :object => @news_post %>
+		<%= render 'phcnotifi/validations', :object => @news_post %>
 	
 		<div class="col-md-3">
 			<div class="panel panel-default">
