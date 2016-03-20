@@ -21,7 +21,7 @@ module Phcpress
 
 		# Create a New News Post (/news/posts/new)
 		def new
-			@news_post = News::Post.current_user.new
+			@news_post = News::Post.new
 		end
 
 		# Edit News Post /news/posts/1/edit
@@ -30,6 +30,7 @@ module Phcpress
 
 		# POST
 		def create
+			@news_post.user = current_user
 			@news_post = News::Post.current_user.(news_post_params)
 
 			if @news_post.save
