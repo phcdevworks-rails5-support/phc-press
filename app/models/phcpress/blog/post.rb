@@ -3,7 +3,6 @@ module Phcpress
 
 		# Filters Before Post
 		before_create :authour
-		belongs_to :user
 
 		# For Image Uploads
 		mount_uploader :pstimage, Phcpress::PstimageUploader
