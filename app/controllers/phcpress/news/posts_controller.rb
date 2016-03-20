@@ -7,6 +7,7 @@ module Phcpress
 
 		# Filters & Security
 		layout 'layouts/phcpress/newspost/news_layout'
+		before_filter :current_account
 		before_action :authenticate_user!
 		before_action :set_news_post, only: [:edit, :update, :destroy]
 
@@ -55,6 +56,13 @@ module Phcpress
 		end
 
 		private
+		
+		def current_account
+			if user_signed_in?
+				current_user
+			end
+		end
+		helper_method :current_account
 
 		# Common Callbacks
 		def set_news_post
