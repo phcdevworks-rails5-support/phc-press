@@ -30,7 +30,7 @@ module Phcpress
 
 		# POST
 		def create
-			@news_post.user = current_user
+			@news_post.user_id = current_user
 			@news_post = News::Post.current_user.(news_post_params)
 
 			if @news_post.save
