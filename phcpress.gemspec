@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
 	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
 
 	# Main Dependencies
-	spec.add_dependency 'rails', '~> 4.2', '>= 4.2.5.1'
+	spec.add_dependency 'rails', '~> 4.2', '>= 4.2.6'
 	spec.add_dependency 'pg', '~> 0.18.4'
 	spec.add_dependency 'devise', '~> 3.5', '>= 3.5.6'
 
@@ -30,8 +30,10 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 	spec.add_dependency 'font-awesome-rails', '~> 4.5'
 	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
-	spec.add_dependency 'phcnotifi', '~> 2.0', '>= 2.0.1'
 	
+	# PHCEngines
+	spec.add_dependency 'phcnotifi', '~> 2.0', '>= 2.0.1'
+
 	# Development & Testing Dependencies
 	spec.add_development_dependency 'sqlite3', '~> 1.3'
 	spec.add_development_dependency 'database_cleaner', '~> 1.5'
