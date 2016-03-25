@@ -8,6 +8,11 @@ module Phcpress
 		# Load Engine Helpers in Main App
 		helper Phcnotifi::Engine.helpers
 		# helper Phctitler::Engine.helpers
+		
+		# Make Current User Sitewide
+		def current_user?(user)
+			user == current_user
+		end
 
 	end
 end
