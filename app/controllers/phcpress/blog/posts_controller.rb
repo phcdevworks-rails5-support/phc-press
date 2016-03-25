@@ -32,7 +32,7 @@ module Phcpress
 		# Create News Post /news/posts/new
 		def create
 			@news_post = News::Post.new(news_post_params)
-			@news_post.user_id = current_user.id
+			@news_post.user_id = current_user
 			if @news_post.save  
 				redirect_to news_posts_path, notice: 'News post was successfully created.'
 				else
