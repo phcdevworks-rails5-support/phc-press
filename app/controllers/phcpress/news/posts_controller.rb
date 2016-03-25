@@ -64,7 +64,7 @@ module Phcpress
 
 		# Whitelist on what can be posted
 		def news_post_params
-			params.require(:news_post).permit(:newspsttitle, :newspsttext, :newspstexcerpts, :pststatus, :pstimage)
+			params.require(:news_post).permit(:newspsttitle, :newspsttext, :newspstexcerpts, :pststatus, :pstimage, :user_id)
 		end
 
 		# Current User
