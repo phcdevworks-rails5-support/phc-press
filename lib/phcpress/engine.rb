@@ -4,6 +4,7 @@ module Phcpress
 		# Load UI Dependecies
 		require 'jquery-rails'
 		require 'phcnotifi'
+		require 'phctitler'
 
 		require 'sass-rails'
 		require 'bootstrap-sass'
@@ -14,6 +15,20 @@ module Phcpress
 
 		# Give Everything a Namespace
 		isolate_namespace Phcpress
+
+		# Load Requried Helper Files
+		config.to_prepare do
+			ApplicationController.helper(ApplicationHelper)
+			Phcnotifi::ApplicationController.helper(ApplicationHelper)
+			Phctitler::ApplicationController.helper(ApplicationHelper)
+		end
+
+		# Auto Mount Plugin
+		initializer "phcpress", before: :load_config_initializers do |app|
+			Rails.application.routes.append do
+				mount Phcpress::Engine, at: "/"
+			end
+		end
 
 		# Testing Generator
 		config.generators do |g|
@@ -26,20 +41,7 @@ module Phcpress
 				request_specs: false
 			g.fixture_replacement :factory_girl, dir: "spec/factories"
 		end
-	
-		# Load Helper Files
-		config.to_prepare do
-			ApplicationController.helper(ApplicationHelper)
-			ApplicationController.helper(Blog::PostsHelper)
-			ApplicationController.helper(News::PostsHelper)
-		end
-		
-		# Auto Mount Plugin
-		initializer "phcpress", before: :load_config_initializers do |app|
-			Rails.application.routes.append do
-				mount Phcpress::Engine, at: "/"
-			end
-		end
+
 
 	end
 end

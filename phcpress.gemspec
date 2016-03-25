@@ -32,7 +32,8 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
 	
 	# PHCEngines
-	spec.add_dependency 'phcnotifi', '~> 2.0', '>= 2.0.1'
+	spec.add_dependency 'phcnotifi', '~> 2.5'
+	spec.add_dependency 'phctitler', '~> 1.7', '>= 1.7.5'
 
 	# Development & Testing Dependencies
 	spec.add_development_dependency 'sqlite3', '~> 1.3'
