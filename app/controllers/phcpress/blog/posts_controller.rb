@@ -28,15 +28,14 @@ module Phcpress
 		def edit
 		end
 
-		# POST
+		# Create News Post /news/posts/new
 		def create
-			@blog_post.user_id = current_user
-			@blog_post = Blog::Post.new(blog_post_params)
-
-			if @blog_post.save
+			@blog_post = Blog::Post.(blog_post_params)
+			@blog_post.user_id = current_user.id
+			if @blog_post.save  
 				redirect_to blog_posts_path, notice: 'Blog post was successfully created.'
-			else
-				render :new
+				else
+					render 'new'
 			end
 		end
 
