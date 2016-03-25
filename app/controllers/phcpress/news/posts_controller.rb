@@ -8,7 +8,7 @@ module Phcpress
 		# Filters & Security
 		layout 'layouts/phcpress/newspost/news_layout'
 		before_action :authenticate_user!
-		before_action :current_user?
+		before_action :current_user
 		before_action :set_news_post, only: [:edit, :update, :destroy]
 
 		# News Post Index (/news/posts)
@@ -68,8 +68,9 @@ module Phcpress
 		end
 
 		# Current User
-		def current_user?(user)
-			user == current_user
+		def current_user
+			return unless session[:user_id]
+			@current_user ||= User.find(session[:user_id])
 		end
 
 	end

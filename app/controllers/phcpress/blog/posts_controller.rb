@@ -1,40 +1,40 @@
 # Load General Controller for Engine
 require_dependency "phcpress/application_controller"
 
-# Code for Blog Posting
+# Code for News Posting
 module Phcpress
-	class Blog::PostsController < ApplicationController
+	class News::PostsController < ApplicationController
 
 		# Filters & Security
-		layout 'layouts/phcpress/blogpost/blog_layout'
+		layout 'layouts/phcpress/newspost/news_layout'
 		before_action :authenticate_user!
-		before_action :current_user?
-		before_action :set_blog_post, only: [:edit, :update, :destroy]
+		before_action :current_user
+		before_action :set_news_post, only: [:edit, :update, :destroy]
 
-		# Blog Post Index (/blog/posts)
+		# News Post Index (/news/posts)
 		def index
-			@blog_posts = Blog::Post.all
+			@news_posts = News::Post.all
 		end
 
-		# Single Blog Post (/blog/posts/1)
+		# Single News Post (/news/posts/1)
 		#def show
 		#end
 
-		# Create a New Blog Post (/blog/posts/new)
+		# Create a New News Post (/news/posts/new)
 		def new
-			@blog_post = Blog::Post.new
+			@news_post = News::Post.new
 		end
 
-		# Edit Blog Post (/blog/posts/1/edit)
+		# Edit News Post /news/posts/1/edit
 		def edit
 		end
 
 		# Create News Post /news/posts/new
 		def create
-			@blog_post = Blog::Post.new(blog_post_params)
-			@blog_post.user_id = current_user.id
-			if @blog_post.save  
-				redirect_to blog_posts_path, notice: 'Blog post was successfully created.'
+			@news_post = News::Post.new(news_post_params)
+			@news_post.user_id = current_user.id
+			if @news_post.save  
+				redirect_to news_posts_path, notice: 'News post was successfully created.'
 				else
 					render 'new'
 			end
@@ -42,8 +42,8 @@ module Phcpress
 
 		# PATCH/PUT
 		def update
-			if @blog_post.update(blog_post_params)
-				redirect_to blog_posts_path, notice: 'Blog post was successfully updated.'
+			if @news_post.update(news_post_params)
+				redirect_to news_posts_path, notice: 'News post was successfully updated.'
 			else
 				render :edit
 			end
@@ -51,25 +51,26 @@ module Phcpress
 
 		# DELETE
 		def destroy
-			@blog_post.destroy
-			redirect_to blog_posts_path, notice: 'Blog post was successfully destroyed.'
+			@news_post.destroy
+			redirect_to news_posts_path, notice: 'News post was successfully destroyed.'
 		end
 
 		private
 
 		# Common Callbacks
-		def set_blog_post
-		@blog_post = Blog::Post.find(params[:id])
+		def set_news_post
+			@news_post = News::Post.find(params[:id])
 		end
 
 		# Whitelist on what can be posted
-		def blog_post_params
-			params.require(:blog_post).permit(:blogpsttitle, :blogpsttext, :blogpstexcerpts, :pststatus, :pstimage)
+		def news_post_params
+			params.require(:news_post).permit(:newspsttitle, :newspsttext, :newspstexcerpts, :pststatus, :pstimage)
 		end
-	
+
 		# Current User
-		def current_user?(user)
-			user == current_user
+		def current_user
+			return unless session[:user_id]
+			@current_user ||= User.find(session[:user_id])
 		end
 
 	end
