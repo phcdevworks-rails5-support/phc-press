@@ -21,7 +21,7 @@ module Phcpress
 
 		# Create a New News Post (/news/posts/new)
 		def new
-			@news_post = current_user.News::Post.new
+			@news_post = News::Post.new
 		end
 
 		# Edit News Post /news/posts/1/edit
@@ -30,7 +30,7 @@ module Phcpress
 
 		# POST
 		def create
-			@news_post = current_user.News::Post.(news_post_params)
+			@news_post = News::Post.(news_post_params)
 
 			if @news_post.save
 				redirect_to news_posts_path, notice: 'News post was successfully created.'

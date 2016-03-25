@@ -8,7 +8,7 @@ module Phcpress
 		mount_uploader :pstimage, Phcpress::PstimageUploader
 
 		# Associate Post Authour to User
-		belongs_to :user
+		belongs_to :user, class_name: 'Devise:User'
 
 		# Define r Devise
 		def authour
