@@ -65,6 +65,11 @@ module Phcpress
 		def blog_post_params
 			params.require(:blog_post).permit(:blogpsttitle, :blogpsttext, :blogpstexcerpts, :pststatus, :pstimage)
 		end
+	
+		# Current User
+		def current_user?(user)
+			user == current_user
+		end
 
 	end
 end

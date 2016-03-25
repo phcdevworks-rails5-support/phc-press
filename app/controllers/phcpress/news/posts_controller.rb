@@ -66,5 +66,10 @@ module Phcpress
 			params.require(:news_post).permit(:newspsttitle, :newspsttext, :newspstexcerpts, :pststatus, :pstimage)
 		end
 
+		# Current User
+		def current_user?(user)
+			user == current_user
+		end
+
 	end
 end
