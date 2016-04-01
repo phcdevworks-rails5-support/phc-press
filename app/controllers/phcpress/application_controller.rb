@@ -6,10 +6,6 @@ module Phcpress
 		protect_from_forgery with: :exception
 		before_action :current_user
 		
-		# Load Engine Helpers in Main App
-		helper Phcnotifi::Engine.helpers
-		# helper Phctitler::Engine.helpers
-		
 		# Make Current User Sitewide
 		def current_user
 			return unless session[:user_id]
