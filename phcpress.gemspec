@@ -23,12 +23,12 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'devise', '~> 3.5', '>= 3.5.6'
 
 	# Upload & Media Dependencies
-	spec.add_dependency 'carrierwave', '~> 0.10.0'
+	spec.add_dependency 'carrierwave', '~> 0.11.0'
 
 	# UI & Frontend Elements
-	spec.add_dependency 'jquery-rails', '~> 4.0', '>= 4.0.5'
+	spec.add_dependency 'jquery-rails', '~> 4.1', '>= 4.1.1'
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-	spec.add_dependency 'font-awesome-rails', '~> 4.5'
+	spec.add_dependency 'font-awesome-rails', '~> 4.5', '>= 4.5.0.1'
 	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
 	
 	# PHCEngines
@@ -36,15 +36,15 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'phctitler', '~> 1.8', '>= 1.8.2'
 
 	# Development & Testing Dependencies
-	spec.add_development_dependency 'sqlite3', '~> 1.3'
-	spec.add_development_dependency 'database_cleaner', '~> 1.5'
+	spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.11'
+	spec.add_development_dependency 'database_cleaner', '~> 1.5', '>= 1.5.1'
 
-	spec.add_development_dependency 'factory_girl_rails', '~> 4.4', '>= 4.4.1'
-	spec.add_development_dependency 'rspec-rails', '~> 3.4'
-	spec.add_development_dependency 'capybara', '~> 2.6'
+	spec.add_development_dependency 'factory_girl_rails', '~> 4.6'
+	spec.add_development_dependency 'rspec-rails', '~> 3.4', '>= 3.4.2'
+	spec.add_development_dependency 'capybara', '~> 2.6', '>= 2.6.2'
 
-	spec.add_development_dependency 'faker', '~> 1.6'
-	spec.add_development_dependency 'selenium-webdriver', '~> 2.52'
+	spec.add_development_dependency 'faker', '~> 1.6', '>= 1.6.3'
+	spec.add_development_dependency 'selenium-webdriver', '~> 2.53'
 	spec.add_development_dependency 'codeclimate-test-reporter', '~> 0.5.0'
 
 end
