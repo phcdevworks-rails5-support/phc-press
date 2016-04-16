@@ -12,5 +12,9 @@ module Phcpress
 			@current_user ||= User.find(session[:user_id])
 		end
 
+		# Load Helpers
+		helper Phctitler::Engine.helpers
+		helper Phcnotifi::Engine.helpers
+
 	end
 end
