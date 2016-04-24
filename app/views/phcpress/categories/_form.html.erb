@@ -1,0 +1,11 @@
+<div class="row">
+	<%= form_for(@category) do |f| %>
+		<div class="form-group">
+			<%= f.label :catname %><br>
+			<%= f.text_field :catname, class: "form-control" %>
+		</div>
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+	<% end %>
+</div>
