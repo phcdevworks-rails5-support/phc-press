@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
 	spec.authors     = ["BradPotts"]
 	spec.email       = ["info@phcnetworks.net"]
 	spec.homepage    = "http://www.phcnetworks.net/engine-yard"
-	spec.summary     = "News & Blog Posts Engin"
-	spec.description = "PHCPress(3) is an open source news & blog engine built for PHCPress application"
+	spec.summary     = "News & Blog Posts Engine"
+	spec.description = "PHCPress(3) is an open source news & blog engine built for PHCPress application."
 	spec.license     = "GPL-3.0"
 
 	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
@@ -32,9 +32,6 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 	spec.add_dependency 'font-awesome-rails', '~> 4.5', '>= 4.5.0.1'
 	spec.add_dependency 'sass-rails', '~> 5.0', '>= 5.0.4'
-
-	# Configuration
-	spec.add_dependency 'figaro', '~> 1.1', '>= 1.1.1'
 
 	# Development & Testing Dependencies
 	spec.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.11'
