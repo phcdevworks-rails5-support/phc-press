@@ -2,7 +2,9 @@ require_dependency "phcpress/application_controller"
 
 module Phcpress
 	class CategoriesController < ApplicationController
-	  before_action :authenticate_user!
+
+		# Security and Filters
+		before_action :authenticate_user!
 		before_action :set_category, only: [:edit, :update, :destroy]
 
 		# GET /categories
