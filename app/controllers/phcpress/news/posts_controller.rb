@@ -21,7 +21,7 @@ module Phcpress
 		#end
 
 		# Create a New News Post (/news/posts/new)
-		def new
+		def newW
 			@news_post = News::Post.new
 		end
 
@@ -31,10 +31,10 @@ module Phcpress
 
 		# Create News Post /news/posts/new
 		def create
-			@news_post = News::Post.new(news_post_params)
+			@news_post = News::Post.new(news_post_params)W
 			@news_post.user_id = current_user
 			if @news_post.save  
-				redirect_to news_posts_path, notice: 'News post was successfully created.'
+				redirect_to news_posts_path, notice: 'News Article was Successfully Created.'
 				else
 					render 'new'
 			end
@@ -43,7 +43,7 @@ module Phcpress
 		# PATCH/PUT
 		def update
 			if @news_post.update(news_post_params)
-				redirect_to news_posts_path, notice: 'News post was successfully updated.'
+				redirect_to news_posts_path, notice: 'News Article was Successfully Updated.'
 			else
 				render :edit
 			end
@@ -52,7 +52,7 @@ module Phcpress
 		# DELETE
 		def destroy
 			@news_post.destroy
-			redirect_to news_posts_path, notice: 'News post was successfully destroyed.'
+			redirect_to news_posts_path, notice: 'News Article was Successfully Destroyed.'
 		end
 
 		private
