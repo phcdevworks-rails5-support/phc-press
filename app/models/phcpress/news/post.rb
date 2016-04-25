@@ -5,6 +5,7 @@ module Phcpress
 		mount_uploader :pstimage, Phcpress::PstimageUploader
 		
 		# Associate Post Authour to User
-		belongs_to :user, class_name: 'Phcengine::User'
+		belongs_to :user
+
 	end
 end
