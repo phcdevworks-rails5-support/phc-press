@@ -26,7 +26,7 @@ module Phcpress
 			@category = Category.new(category_params)
 
 			if @category.save
-				redirect_to categories_path, notice: 'Category was successfully created.'
+				redirect_to categories_path, notice: 'Category was Successfully Created.'
 			else
 				render :new
 			end
@@ -35,7 +35,7 @@ module Phcpress
 		# Update News/Blog Category
 		def update
 			if @category.update(category_params)
-				redirect_to categories_path, notice: 'Category was successfully updated.'
+				redirect_to categories_path, notice: 'Category was Successfully Updated.'
 			else
 				render :edit
 			end
@@ -44,7 +44,7 @@ module Phcpress
 		# Delete News/Blog Category
 		def destroy
 			@category.destroy
-			redirect_to categories_path, notice: 'Category was successfully destroyed.'
+			redirect_to categories_path, notice: 'Category was Successfully Destroyed.'
 		end
 
 		private
