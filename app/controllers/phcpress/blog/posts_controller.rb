@@ -1,7 +1,5 @@
-# Load General Controller for Engine
 require_dependency "phcpress/application_controller"
 
-# Code for News Posting
 module Phcpress
 	class News::PostsController < ApplicationController
 
@@ -11,48 +9,44 @@ module Phcpress
 		before_action :current_user
 		before_action :set_news_post, only: [:edit, :update, :destroy]
 
-		# News Post Index (/news/posts)
+		# Blog Post Index
 		def index
 			@news_posts = News::Post.all
 		end
 
-		# Single News Post (/news/posts/1)
-		#def show
-		#end
-
-		# Create a New News Post (/news/posts/new)
+		# New Blog Article
 		def new
 			@news_post = News::Post.new
 		end
 
-		# Edit News Post /news/posts/1/edit
+		# Edit Blog Article
 		def edit
 		end
 
-		# Create News Post /news/posts/new
+		# Create Blog Article
 		def create
 			@news_post = News::Post.new(news_post_params)
 			@news_post.user_id = current_user
 			if @news_post.save  
-				redirect_to news_posts_path, notice: 'News post was successfully created.'
+				redirect_to news_posts_path, notice: 'Blog Article was Successfully Created.'
 				else
 					render 'new'
 			end
 		end
 
-		# PATCH/PUT
+		# Update Blog Article
 		def update
 			if @news_post.update(news_post_params)
-				redirect_to news_posts_path, notice: 'News post was successfully updated.'
+				redirect_to news_posts_path, notice: 'Blog Article was Successfully Updated.'
 			else
 				render :edit
 			end
 		end
 
-		# DELETE
+		# Delete Blog Article
 		def destroy
 			@news_post.destroy
-			redirect_to news_posts_path, notice: 'News post was successfully destroyed.'
+			redirect_to news_posts_path, notice: 'Blog Article was Successfully Destroyed.'
 		end
 
 		private
@@ -62,7 +56,7 @@ module Phcpress
 			@news_post = News::Post.find(params[:id])
 		end
 
-		# Whitelist on what can be posted
+		# Whitelist
 		def news_post_params
 			params.require(:news_post).permit(:newspsttitle, :newspsttext, :newspstexcerpts, :pststatus, :pstimage, :user_id)
 		end
