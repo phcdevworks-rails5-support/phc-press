@@ -1,11 +1,15 @@
 <div class="row">
 	<%= form_for(@category) do |f| %>
+
+		<!-- PHC-Notifi Render Validation -->
+		<%= render 'phcnotifi/validations', :object => @category %>
+
 		<div class="form-group">
-			<%= f.label :catname %><br>
+			<label><%= f.label :catname, Category Name %></label>
 			<%= f.text_field :catname, class: "form-control" %>
 		</div>
 		<div class="actions">
-			<%= f.submit %>
+			<%= f.submit "Submit", class: "btn btn-primary" %>
 		</div>
 	<% end %>
 </div>
