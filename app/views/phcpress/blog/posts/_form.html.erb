@@ -16,7 +16,7 @@
 					</div>
 					<div class="form-group">
 						<label><%= f.label :pstcategory, "Post Category" %></label>
-						<%= collection_select(:pstcategory, :pstcategory_id, News::Phcpress::Post.order('newspsttitle'), :id, :newspsttitle, {}, {class: "form-control form-control-sm"}) %>
+						<%= collection_select(:pstcategory, :pstcategory_id, Blog::Phcpress::Post.order('newspsttitle'), :id, :newspsttitle, {}, {class: "form-control form-control-sm"}) %>
 					</div>
 					<div class="actions">
 						<%= f.submit "Publish Blog Article", class: "btn btn-primary btn-sm" %>
