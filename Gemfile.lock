@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcpress (3.7.5)
+    phcpress (3.7.6)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       carrierwave (~> 0.11.0)
       devise (~> 4.0, >= 4.0.1)
