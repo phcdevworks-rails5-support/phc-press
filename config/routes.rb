@@ -1,6 +1,5 @@
 Phcpress::Engine.routes.draw do
 
-  resources :categories
 	# Blog Routes
 	namespace :blog do
 		resources :posts
@@ -10,5 +9,8 @@ Phcpress::Engine.routes.draw do
 	namespace :news do
 		resources :posts
 	end
+
+	# Categories
+	resources :categories
 
 end
