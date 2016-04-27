@@ -1,7 +1,7 @@
 class AddPhcpressCategoryToPhcpressBlogPosts < ActiveRecord::Migration
 
 	def change
-		add_column :pstcategory_id, :phcpress_blog_posts, :string
+		add_column :phcpress_blog_posts, :pstcategory_id, :string
 	end
 
 end
