@@ -13,7 +13,7 @@ module Phcpress
 		end
 
 		# Load Helpers
-		helper Phctitler::Engine.helpers
+		helper Phctitleseo::Engine.helpers
 		helper Phcnotifi::Engine.helpers
 
 	end

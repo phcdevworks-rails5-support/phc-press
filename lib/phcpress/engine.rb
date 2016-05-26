@@ -4,7 +4,7 @@ module Phcpress
 		# Load UI Dependecies
 		require 'jquery-rails'
 		require 'phcnotifi'
-		require 'phctitler'
+		require 'phctitleseo'
 
 		require 'sass-rails'
 		require 'bootstrap-sass'
@@ -20,7 +20,7 @@ module Phcpress
 		config.to_prepare do
 			ApplicationController.helper(ApplicationHelper)
 			Phcnotifi::ApplicationController.helper(ApplicationHelper)
-			Phctitler::ApplicationController.helper(ApplicationHelper)
+			Phctitleseo::ApplicationController.helper(ApplicationHelper)
 		end
 
 		# Auto Mount Plugin
