@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'phctitleseo', '~> 2.0'
 	spec.add_dependency 'pg', '~> 0.18.4'
 	spec.add_dependency 'devise', '~> 4.1', '>= 4.1.1'
+	spec.add_dependency 'liquid', '~> 3.0', '>= 3.0.6'
 
 	# Upload & Media Dependencies
 	spec.add_dependency 'carrierwave', '~> 0.11.2'

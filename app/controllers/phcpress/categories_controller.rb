@@ -4,7 +4,7 @@ module Phcpress
 	class CategoriesController < ApplicationController
 
 		# Security and Filters
-		before_action :authenticate_user!
+		before_action :authenticate_user!, if: -> { defined?(Devise) }
 		before_action :set_category, only: [:edit, :update, :destroy]
 
 		# Categories Index

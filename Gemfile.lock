@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcpress (3.8.0)
+    phcpress (3.8.1)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       carrierwave (~> 0.11.2)
       country_select (~> 2.5, >= 2.5.2)
@@ -10,6 +10,7 @@ PATH
       gravtastic (~> 3.2, >= 3.2.6)
       jquery-rails (~> 4.1, >= 4.1.1)
       jquery-ui-rails (~> 5.0, >= 5.0.5)
+      liquid (~> 3.0, >= 3.0.6)
       pg (~> 0.18.4)
       phcnotifi (~> 2.6, >= 2.6.5)
       phctitleseo (~> 2.0)
@@ -126,6 +127,7 @@ GEM
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (1.8.3)
+    liquid (3.0.6)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)

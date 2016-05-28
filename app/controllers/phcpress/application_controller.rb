@@ -3,8 +3,8 @@ module Phcpress
 
 		# Prevent CSRF attacks by raising an exception.
 		# For APIs, you may want to use :null_session instead.
+		before_action :authenticate_user!, if: -> { defined?(Devise) }
 		protect_from_forgery with: :exception
-		before_action :current_user
 		
 		# Make Current User Sitewide
 		def current_user
