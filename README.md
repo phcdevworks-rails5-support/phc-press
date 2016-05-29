@@ -4,20 +4,20 @@
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
   
 ### PHCPress(3) (Blog & News Post Engine) Documentation
-PHCPress is an open source news & blog engine built for PHCPress application
+PHCPress is a basic open source news & blog engine.
   
-#### Step 1 - Add PHCPress to your gemfile  
+#### Step 1 - Add PHCPress Engine to your gemfile  
 
-	gem 'phcpress', '~> 3.7', '>= 3.7.5'
+	gem 'phcpress', '~> 3.8', '>= 3.8.1'
 	bundle exec install
   
-#### Step 2 - Add PHCPress database migration files  
+#### Step 2 - Copy over PHCPress database migration files  
 
 	rake phcpress:install:migrations
 	rake db:migrate
   
 #### Step 3 - Recompile Assets  
-PHCPress UI requires bootstrap and fontawesome to operate.  
+PHCPress included Virws & UI requires bootstrap and fontawesome.  
   
 	rake assets:clobber
 	rake assets:precompile

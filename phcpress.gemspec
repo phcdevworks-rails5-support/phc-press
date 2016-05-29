@@ -9,10 +9,10 @@ Gem::Specification.new do |spec|
 	spec.name        = "phcpress"
 	spec.version     = Phcpress::VERSION
 	spec.authors     = ["BradPotts"]
-	spec.email       = ["info@phcnetworks.net"]
-	spec.homepage    = "http://www.phcnetworks.net/engine-yard"
+	spec.email       = ["admin-development@phcnetworks.net"]
+	spec.homepage    = "http://www.phcnetworks.net/"
 	spec.summary     = "News & Blog Posts Engine"
-	spec.description = "PHCPress(3) is an open source news & blog engine built for PHCPress application."
+	spec.description = "PHCPress(3) is a basic open source news & blog engine."
 	spec.license     = "GPL-3.0"
 
 	spec.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.md"]
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'phctitleseo', '~> 2.0'
 	spec.add_dependency 'pg', '~> 0.18.4'
 	spec.add_dependency 'devise', '~> 4.1', '>= 4.1.1'
-	spec.add_dependency 'liquid', '~> 3.0', '>= 3.0.6'
+	spec.add_dependency "mustache", "~> 1.0"
 
 	# Upload & Media Dependencies
 	spec.add_dependency 'carrierwave', '~> 0.11.2'
