@@ -11,7 +11,7 @@ PHCPress is a basic open source news & blog engine.
 	gem 'phcpress', '~> 3.8', '>= 3.8.1'
 	bundle exec install
   
-#### Step 2 - Copy over PHCPress database migration files  
+#### Step 2 - Copy over database migration files  
 
 	rake phcpress:install:migrations
 	rake db:migrate
