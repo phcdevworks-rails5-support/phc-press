@@ -7,7 +7,7 @@ module Phcpress
 
 		# Filters & Security
 		layout 'layouts/phcpress/blogpost/blog_layout'
-		before_action :authenticate_user!, if: -> { defined?(Devise) }
+		before_action :authenticate_user!
 		before_action :set_blog_post, only: [:edit, :update, :destroy]
 
 		# Blog Post Index (/blog/posts)

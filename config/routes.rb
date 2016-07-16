@@ -11,6 +11,6 @@ Phcpress::Engine.routes.draw do
 	end
 
 	# Categories
-	resources :categories, class_name: 'Phcpress::Category'
+	resources :categories, class_name: 'Phcpress::Modules::Category'
 
 end

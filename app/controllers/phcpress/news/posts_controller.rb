@@ -5,7 +5,7 @@ module Phcpress
 
 		# Filters & Security
 		layout 'layouts/phcpress/newspost/news_layout'
-		before_action :authenticate_user!, if: -> { defined?(Devise) }
+		before_action :authenticate_user!
 		before_action :set_news_post, only: [:edit, :update, :destroy]
 
 		# News Post Index

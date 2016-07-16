@@ -40,7 +40,7 @@ module Phcpress
     describe "GET #index" do
       it "assigns all news_posts as @news_posts" do
         post = News::Post.create! valid_attributes
-        get :index, {}, valid_session
+        get :index, params: {}, session: valid_session
         expect(assigns(:news_posts)).to eq([post])
       end
     end
@@ -48,14 +48,14 @@ module Phcpress
     describe "GET #show" do
       it "assigns the requested news_post as @news_post" do
         post = News::Post.create! valid_attributes
-        get :show, {:id => post.to_param}, valid_session
+        get :show, params: {id: post.to_param}, session: valid_session
         expect(assigns(:news_post)).to eq(post)
       end
     end
 
     describe "GET #new" do
       it "assigns a new news_post as @news_post" do
-        get :new, {}, valid_session
+        get :new, params: {}, session: valid_session
         expect(assigns(:news_post)).to be_a_new(News::Post)
       end
     end
@@ -63,7 +63,7 @@ module Phcpress
     describe "GET #edit" do
       it "assigns the requested news_post as @news_post" do
         post = News::Post.create! valid_attributes
-        get :edit, {:id => post.to_param}, valid_session
+        get :edit, params: {id: post.to_param}, session: valid_session
         expect(assigns(:news_post)).to eq(post)
       end
     end
@@ -72,30 +72,30 @@ module Phcpress
       context "with valid params" do
         it "creates a new News::Post" do
           expect {
-            post :create, {:news_post => valid_attributes}, valid_session
+            post :create, params: {news_post: valid_attributes}, session: valid_session
           }.to change(News::Post, :count).by(1)
         end
 
         it "assigns a newly created news_post as @news_post" do
-          post :create, {:news_post => valid_attributes}, valid_session
+          post :create, params: {news_post: valid_attributes}, session: valid_session
           expect(assigns(:news_post)).to be_a(News::Post)
           expect(assigns(:news_post)).to be_persisted
         end
 
         it "redirects to the created news_post" do
-          post :create, {:news_post => valid_attributes}, valid_session
+          post :create, params: {news_post: valid_attributes}, session: valid_session
           expect(response).to redirect_to(News::Post.last)
         end
       end
 
       context "with invalid params" do
         it "assigns a newly created but unsaved news_post as @news_post" do
-          post :create, {:news_post => invalid_attributes}, valid_session
+          post :create, params: {news_post: invalid_attributes}, session: valid_session
           expect(assigns(:news_post)).to be_a_new(News::Post)
         end
 
         it "re-renders the 'new' template" do
-          post :create, {:news_post => invalid_attributes}, valid_session
+          post :create, params: {news_post: invalid_attributes}, session: valid_session
           expect(response).to render_template("new")
         end
       end
@@ -109,20 +109,20 @@ module Phcpress
 
         it "updates the requested news_post" do
           post = News::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :news_post => new_attributes}, valid_session
+          put :update, params: {id: post.to_param, news_post: new_attributes}, session: valid_session
           post.reload
           skip("Add assertions for updated state")
         end
 
         it "assigns the requested news_post as @news_post" do
           post = News::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :news_post => valid_attributes}, valid_session
+          put :update, params: {id: post.to_param, news_post: valid_attributes}, session: valid_session
           expect(assigns(:news_post)).to eq(post)
         end
 
         it "redirects to the news_post" do
           post = News::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :news_post => valid_attributes}, valid_session
+          put :update, params: {id: post.to_param, news_post: valid_attributes}, session: valid_session
           expect(response).to redirect_to(post)
         end
       end
@@ -130,13 +130,13 @@ module Phcpress
       context "with invalid params" do
         it "assigns the news_post as @news_post" do
           post = News::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :news_post => invalid_attributes}, valid_session
+          put :update, params: {id: post.to_param, news_post: invalid_attributes}, session: valid_session
           expect(assigns(:news_post)).to eq(post)
         end
 
         it "re-renders the 'edit' template" do
           post = News::Post.create! valid_attributes
-          put :update, {:id => post.to_param, :news_post => invalid_attributes}, valid_session
+          put :update, params: {id: post.to_param, news_post: invalid_attributes}, session: valid_session
           expect(response).to render_template("edit")
         end
       end
@@ -146,13 +146,13 @@ module Phcpress
       it "destroys the requested news_post" do
         post = News::Post.create! valid_attributes
         expect {
-          delete :destroy, {:id => post.to_param}, valid_session
+          delete :destroy, params: {id: post.to_param}, session: valid_session
         }.to change(News::Post, :count).by(-1)
       end
 
       it "redirects to the news_posts list" do
         post = News::Post.create! valid_attributes
-        delete :destroy, {:id => post.to_param}, valid_session
+        delete :destroy, params: {id: post.to_param}, session: valid_session
         expect(response).to redirect_to(news_posts_url)
       end
     end
