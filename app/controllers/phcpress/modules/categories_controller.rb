@@ -31,7 +31,7 @@ module Phcpress
 			@modules_category = Modules::Category.new(modules_category_params)
 
 			if @modules_category.save
-				redirect_to @modules_category, notice: 'Category was successfully created.'
+				redirect_to modules_categories_url, notice: 'Category was successfully created.'
 				else
 					render :new
 			end
@@ -40,7 +40,7 @@ module Phcpress
 		# Update News/Blog Category
 		def update
 			if @modules_category.update(modules_category_params)
-				redirect_to @modules_category, notice: 'Category was successfully updated.'
+				redirect_to modules_categories_url, notice: 'Category was successfully updated.'
 				else
 					render :edit
 			end
