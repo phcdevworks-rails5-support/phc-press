@@ -61,7 +61,7 @@ module Phcpress
 
 		# Whitelist on what can be posted
 		def blog_post_params
-			params.require(:blog_post).permit(:blogpsttitle, :blogpsttext, :blogpstexcerpts, :pststatus, :pstimage, :remove_image, category_id, :user_id)
+			params.require(:blog_post).permit(:blogpsttitle, :blogpsttext, :blogpstexcerpts, :pststatus, :pstimage, :remove_pstimage, category_id, :user_id)
 		end
 	
 		# Current User

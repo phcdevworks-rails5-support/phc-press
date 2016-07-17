@@ -34,7 +34,7 @@
 						<label><%= f.label :pstimage, "Featured Image" %></label>
 						<%= f.file_field :pstimage, class: "form-control" %>
 					</div>
-					<% if f.object.image? %>
+					<% if f.object.pstimage? %>
 						<%= image_tag f.object.pstimage, class: "img-responsive img-thumbnail" %>
 						<%= f.label :remove_pstimage %>
 						<%= f.check_box :remove_pstimage %>
