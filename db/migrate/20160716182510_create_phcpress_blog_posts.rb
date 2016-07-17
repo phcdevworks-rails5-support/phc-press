@@ -1,4 +1,4 @@
-class CreatePhcpressNewsPosts < ActiveRecord::Migration[5.0]
+class CreatePhcpressBlogPosts < ActiveRecord::Migration[5.0]
 	def change
 		create_table :phcpress_blog_posts do |t|
 

@@ -2,7 +2,7 @@ module Phcpress
 	class News::Post < ApplicationRecord
 
 		# For Image Uploads
-		mount_uploader :pstimage, Phcpress::PstimageUploader
+		mount_uploader :pstimage
 		
 		# Associate Post Authour to User
 		belongs_to :user, class_name: 'Phcengine::User'
