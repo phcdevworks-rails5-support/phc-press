@@ -8,7 +8,8 @@ class CreatePhcpressNewsPosts < ActiveRecord::Migration[5.0]
 			t.text :newspstexcerpts
 			t.string :pstimage
 
-			t.references :category, index: true
+			t.integer :user_id
+			t.integer :category_id
 
 			t.timestamps
 
