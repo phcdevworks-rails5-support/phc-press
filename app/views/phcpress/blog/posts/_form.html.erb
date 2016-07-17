@@ -5,6 +5,7 @@
 		<%= render 'phcnotifi/validations', :object => @blog_post %>
 	
 		<div class="col-md-3">
+
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<i class="fa fa-paper-plane-o"></i> Publish Panel
@@ -23,6 +24,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<i class="fa fa-camera-retro"></i> Post Images
@@ -32,10 +34,18 @@
 						<label><%= f.label :pstimage, "Featured Image" %></label>
 						<%= f.file_field :pstimage, class: "form-control" %>
 					</div>
+					<% if f.object.image? %>
+						<%= image_tag f.object.pstimage, class: "img-responsive img-thumbnail" %>
+						<%= f.label :remove_pstimage %>
+						<%= f.check_box :remove_pstimage %>
+					<% end %>
 				</div>
 			</div>
+
 		</div>
+
 		<div class="col-md-9 ">
+
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<i class="fa fa-pencil-square-o"></i> Blog Post Publisher
@@ -55,6 +65,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 	<% end %>

@@ -61,7 +61,7 @@ module Phcpress
 
 		# Whitelist
 		def modules_category_params
-			params.require(:modules_category).permit(:catname)
+			params.require(:modules_category).permit(:catname, :user_id)
 		end
 
 	end
