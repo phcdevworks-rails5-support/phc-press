@@ -8,10 +8,9 @@ class CreatePhcpressBlogPosts < ActiveRecord::Migration[5.0]
 			t.text :blogpstexcerpts
 			t.string :pstimage
 
-			t.integer :user_id
-			t.integer :category_id
+			t.references :category, index: true
 
-			t.timestamps null: false
+			t.timestamps
 
 		end
 	end

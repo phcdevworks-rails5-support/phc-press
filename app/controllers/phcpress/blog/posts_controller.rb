@@ -6,8 +6,7 @@ module Phcpress
 	class Blog::PostsController < ApplicationController
 
 		# Filters & Security
-		layout 'layouts/phcpress/blogpost/blog_layout'
-		before_action :authenticate_user!
+		#layout 'layouts/phcpress/blogpost/blog_layout'
 		before_action :set_blog_post, only: [:edit, :update, :destroy]
 
 		# Blog Post Index (/blog/posts)
@@ -31,7 +30,6 @@ module Phcpress
 		# Create News Post /news/posts/new
 		def create
 			@blog_post = Blog::Post.new(blog_post_params)
-			@blog_post.user_id = current_user.id
 			if @blog_post.save  
 				redirect_to blog_posts_path, notice: 'Blog post was successfully created.'
 				else

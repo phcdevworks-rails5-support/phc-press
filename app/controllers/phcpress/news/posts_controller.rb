@@ -4,8 +4,8 @@ module Phcpress
 	class News::PostsController < ApplicationController
 
 		# Filters & Security
-		layout 'layouts/phcpress/newspost/news_layout'
-		before_action :authenticate_user!
+		#layout 'layouts/phcpress/newspost/news_layout'
+		#before_action :authenticate_user!
 		before_action :set_news_post, only: [:edit, :update, :destroy]
 
 		# News Post Index
@@ -25,7 +25,7 @@ module Phcpress
 		# Create News Article
 		def create
 			@news_post = News::Post.new(news_post_params)
-			@news_post.user_id = current_user
+			#@news_post.user_id = current_user
 			if @news_post.save  
 				redirect_to news_posts_path, notice: 'News Article was Successfully Created.'
 				else

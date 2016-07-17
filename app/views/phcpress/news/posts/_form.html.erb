@@ -17,7 +17,7 @@
 					</div>
 					<div class="form-group">
 						<%= f.label :pstcategory, "Post Category" %>
-						<%= collection_select(:pstcategory, :pstcategory_id, Phcpress::Category.order('catname'), :id, :catname, {}, {class: "form-control form-control-sm"}) %>
+						<%= collection_select(:pstcategory, :pstcategory_id, Phcpress::Modules::Category.order('catname'), :id, :catname, {}, {class: "form-control form-control-sm"}) %>
 					</div>
 					<div class="actions">
 						<%= f.submit "Publish News Article", class: "btn btn-primary btn-sm" %>
@@ -34,7 +34,6 @@
 						<%= f.label :pstimage, "Featured Image" %>
 						<%= f.file_field :pstimage, class: "form-control" %>
 					</div>
-					<%= image_tag(@news_post.pstimage_url, class: "img-responsive img-thumbnail") %>
 				</div>
 			</div>
 

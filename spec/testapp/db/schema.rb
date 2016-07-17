@@ -18,15 +18,14 @@ ActiveRecord::Schema.define(version: 20160716182848) do
     t.string   "pststatus"
     t.text     "blogpstexcerpts"
     t.string   "pstimage"
-    t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["category_id"], name: "index_phcpress_blog_posts_on_category_id"
   end
 
   create_table "phcpress_modules_categories", force: :cascade do |t|
     t.string   "catname"
-    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,10 +36,10 @@ ActiveRecord::Schema.define(version: 20160716182848) do
     t.string   "pststatus"
     t.text     "newspstexcerpts"
     t.string   "pstimage"
-    t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["category_id"], name: "index_phcpress_news_posts_on_category_id"
   end
 
 end
