@@ -17,7 +17,7 @@ PHCPress is a basic open source news & blog engine.
 	rake db:migrate
   
 #### Step 3 - Recompile Assets  
-PHCPress included Virws & UI requires bootstrap and fontawesome.  
+PHCPress included Views & UI requires bootstrap and FontAwesome.  
   
 	rake assets:clobber
 	rake assets:precompile
@@ -27,4 +27,3 @@ PHCPress default Carrierwave settings can be overwritten (suggested).
   
 - [How to Override PHCPress Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader---Override)
 - [How to Override - Cloudinary Example](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary))
-- 
