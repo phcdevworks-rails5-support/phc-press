@@ -18,7 +18,7 @@
 					<div class="form-group">
 						<%= f.fields_for :connection do |modules_connection| %>
 							<%= modules_connection.label :category_id, "Post Category" %>
-							<%= collection_select(:category_id, :category_id, Phcpress::Modules::Category.order('catname'), :id, :catname, {}, {class: "form-control form-control"}) %>
+							<%= collection_select(:modules_connection, :category_id, Phcpress::Modules::Category.order('catname'), :id, :catname, {}, {class: "form-control form-control"}) %>
 						<% end %>
 					</div>
 					<div class="actions">
