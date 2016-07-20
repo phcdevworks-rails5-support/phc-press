@@ -17,11 +17,11 @@
 				</thead>
 
 				<tbody>
-					<% @categories.each do |modules_category| %>
+					<% @modules_categories.each do |modules_category| %>
 						<tr>
 							<td><%= modules_category.catname %></td>
         					<td><div class="btn-group" role="group" aria-label="Blog Articles">
-								<%= link_to 'Edit', edit_modules_category_path(category) , class: "btn btn-primary btn-xs" %>
+								<%= link_to 'Edit', edit_modules_category_path(modules_category) , class: "btn btn-primary btn-xs" %>
 								<%= link_to 'Trash', modules_category, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
 								</div>
 							</td>
