@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcpress (4.0.0)
+    phcpress (5.0.0)
       authrocket (~> 2.0, >= 2.0.2)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       carrierwave (~> 0.11.2)
@@ -61,7 +61,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    arel (7.0.0)
+    arel (7.1.0)
     authrocket (2.0.2)
       jwt (~> 1.5.0)
       ncore (~> 2.0)

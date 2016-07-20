@@ -3,7 +3,7 @@
 [![Issue Count](https://codeclimate.com/github/PHCNetworks/phc-press/badges/issue_count.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
   
-### PHCPress(4) (Blog & News Post Engine) Documentation
+### PHCPress(5) (Blog & News Post Engine) Documentation
 PHCPress is a basic open source news & blog engine.
   
 #### Step 1 - Add PHCPress Engine to your gemfile  

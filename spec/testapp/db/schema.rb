@@ -10,18 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160716182848) do
+ActiveRecord::Schema.define(version: 20160720182032) do
 
-  create_table "phcpress_blog_posts", force: :cascade do |t|
-    t.string   "blogpsttitle"
-    t.text     "blogpsttext"
+  create_table "phcpress_articles_posts", force: :cascade do |t|
+    t.string   "psttitle"
+    t.text     "psttext"
     t.string   "pststatus"
-    t.text     "blogpstexcerpts"
+    t.text     "pstexcerpts"
     t.string   "pstimage"
-    t.integer  "category_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["category_id"], name: "index_phcpress_blog_posts_on_category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "phcpress_modules_categories", force: :cascade do |t|
@@ -30,16 +28,13 @@ ActiveRecord::Schema.define(version: 20160716182848) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "phcpress_news_posts", force: :cascade do |t|
-    t.string   "newspsttitle"
-    t.text     "newspsttext"
-    t.string   "pststatus"
-    t.text     "newspstexcerpts"
-    t.string   "pstimage"
+  create_table "phcpress_modules_connections", force: :cascade do |t|
+    t.integer  "post_id"
     t.integer  "category_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["category_id"], name: "index_phcpress_news_posts_on_category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_phcpress_modules_connections_on_category_id"
+    t.index ["post_id"], name: "index_phcpress_modules_connections_on_post_id"
   end
 
 end

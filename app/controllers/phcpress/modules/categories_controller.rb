@@ -4,8 +4,6 @@ module Phcpress
 	class Modules::CategoriesController < ApplicationController
 
 		# Security and Filters
-		layout 'layouts/phcpress/category/category_layout'
-		before_action :authenticate_user!
 		before_action :set_modules_category, only: [:show, :edit, :update, :destroy]
 
 		# Categories Index
@@ -13,20 +11,20 @@ module Phcpress
 			@modules_categories = Modules::Category.all
 		end
 
-		# Detail News/Blog Category
+		# Categories Show
 		def show
 		end
 
-		# New News/Blog Category
+		# Categories New
 		def new
 			@modules_category = Modules::Category.new
 		end
 
-		# Edit News/Blog Category
+		# Categories Edit
 		def edit
 		end
 
-		# Create News/Blog Category
+		# POST
 		def create
 			@modules_category = Modules::Category.new(modules_category_params)
 
@@ -37,7 +35,7 @@ module Phcpress
 			end
 		end
 
-		# Update News/Blog Category
+		# PATCH/PUT
 		def update
 			if @modules_category.update(modules_category_params)
 				redirect_to modules_categories_url, notice: 'Category was successfully updated.'
@@ -46,7 +44,7 @@ module Phcpress
 			end
 		end
 
-		# Delete News/Blog Category
+		# DELETE
 		def destroy
 			@modules_category.destroy
 			redirect_to modules_categories_url, notice: 'Category was successfully destroyed.'
@@ -61,7 +59,7 @@ module Phcpress
 
 		# Whitelist
 		def modules_category_params
-			params.require(:modules_category).permit(:catname, :user_id)
+			params.require(:modules_category).permit(:catname)
 		end
 
 	end

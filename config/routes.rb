@@ -1,16 +1,14 @@
 Phcpress::Engine.routes.draw do
 
-	# Blog Routes
-	namespace :blog do
-		resources :posts, class_name: 'Phcpress::News::Post'
+	# Article Routes
+	namespace :articles do
+		resources :posts, class_name: 'Phcpress::Articles::Post'
 	end
 
-	# News Routes
-	namespace :news do
-		resources :posts, class_name: 'Phcpress::Blog::Post'
+	# Module Routes
+	namespace :modules do
+		resources :connections, class_name: 'Phcpress::Modules::Connections'
+		resources :categories, class_name: 'Phcpress::Modules::Category'
 	end
-
-	# Categories
-	resources :categories, class_name: 'Phcpress::Modules::Category'
 
 end
