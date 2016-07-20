@@ -31,7 +31,7 @@ module Phcpress
 			@modules_connection = Modules::Connection.new(modules_connection_params)
 
 			if @modules_connection.save
-				redirect_to @modules_connection, notice: 'Connection was successfully created.'
+				redirect_to modules_connections_url, notice: 'Connection was successfully created.'
 				else
 					render :new
 			end
@@ -40,7 +40,7 @@ module Phcpress
 		# PATCH/PUT
 		def update
 			if @modules_connection.update(modules_connection_params)
-				redirect_to @modules_connection, notice: 'Connection was successfully updated.'
+				redirect_to modules_connections_url, notice: 'Connection was successfully updated.'
 				else
 					render :edit
 			end

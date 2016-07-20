@@ -29,7 +29,7 @@ module Phcpress
 			@articles_post = Articles::Post.new(articles_post_params)
 
 			if @articles_post.save
-				redirect_to @articles_post, notice: 'Post was successfully created.'
+				redirect_to articles_posts_url, notice: 'Post was successfully created.'
 				else
 					render :new
 			end
@@ -38,7 +38,7 @@ module Phcpress
 		# PATCH/PUT
 		def update
 			if @articles_post.update(articles_post_params)
-				redirect_to @articles_post, notice: 'Post was successfully updated.'
+				redirect_to articles_posts_url, notice: 'Post was successfully updated.'
 				else
 					render :edit
 			end
