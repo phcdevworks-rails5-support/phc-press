@@ -16,10 +16,10 @@
 						<%= f.select( :pststatus, [['Draft','draft'],['Publish','publish'],['Review','review']], {}, {class: "form-control form-control-sm"}) %>
 					</div>
 					<div class="form-group">
-		
-							<%= f.label :category_id, "Post Category" %>
-							<%= collection_select(:category_id, :category_id, Phcpress::Modules::Category.order('catname'), :id, :catname, {}, {class: "form-control form-control"}) %>
-			
+						<%= f.fields_for :connection do |modules_connection| %>
+							<%= modules_connection.label :category_id, "Post Category" %>
+							<%= collection_select(:modules_connection, :category_id, Phcpress::Modules::Category.order('catname'), :id, :catname, {}, {class: "form-control form-control"}) %>
+						<% end %>
 					</div>
 					<div class="actions">
 						<%= f.submit "Publish", class: "btn btn-primary btn-sm" %>
