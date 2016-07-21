@@ -8,6 +8,8 @@ class CreatePhcpressArticlesPosts < ActiveRecord::Migration[5.0]
 			t.text :pstexcerpts
 			t.string :pstimage
 
+			t.references :category
+
 			t.timestamps
 
 		end

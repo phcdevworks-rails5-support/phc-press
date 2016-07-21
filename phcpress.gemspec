@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'country_select', '~> 2.5', '>= 2.5.2'
 	spec.add_dependency 'gravtastic', '~> 3.2', '>= 3.2.6'
 
-	# Upload & Media Dependencies
+	# Modules Dependencies
 	spec.add_dependency 'carrierwave', '~> 0.11.2'
 
 	# API and Rabl
