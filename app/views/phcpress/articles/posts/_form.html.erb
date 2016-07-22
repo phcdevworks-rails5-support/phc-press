@@ -15,12 +15,6 @@
 						<%= f.label :pststatus, "Post Status" %>
 						<%= f.select( :pststatus, [['Draft','draft'],['Publish','publish'],['Review','review']], {}, {class: "form-control form-control-sm"}) %>
 					</div>
-					<div class="form-group">
-						<%= f.fields_for :connection do |modules_connection| %>
-							<%= modules_connection.label :category_id, "Post Category" %>
-							<%= collection_select(:modules_connection, :category_id, Phcpress::Modules::Category.order('catname'), :id, :catname, {}, {class: "form-control form-control"}) %>
-						<% end %>
-					</div>
 					<div class="actions">
 						<%= f.submit "Publish", class: "btn btn-primary btn-sm" %>
 					</div>
@@ -41,6 +35,20 @@
 						<%= f.label :remove_pstimage %>
 						<%= f.check_box :remove_pstimage %>
 					<% end %>
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<i class="fa fa-sitemap"></i> Post Categories & Tags
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<%= f.collection_check_boxes :category_ids, Phcpress::Modules::Category.all, :id, :catname do |post_category| %>
+							<%= post_category.check_box %>
+							<%= post_category.label %></br>
+						<% end %>
+					</div>
 				</div>
 			</div>
 

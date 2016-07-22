@@ -28,8 +28,8 @@ module Phcpress
 		# POST
 		def create
 			@articles_post = Articles::Post.new(articles_post_params)
-
 			if @articles_post.save
+				@articles_post.connections.build
 				redirect_to articles_posts_url, notice: 'Post was successfully created.'
 				else
 					render :new
@@ -39,6 +39,7 @@ module Phcpress
 		# PATCH/PUT
 		def update
 			if @articles_post.update(articles_post_params)
+				@articles_post.connections.build
 				redirect_to articles_posts_url, notice: 'Post was successfully updated.'
 				else
 					render :edit
@@ -60,7 +61,7 @@ module Phcpress
 
 		# Params Whitelist
 		def articles_post_params
-			params.require(:articles_post).permit(:psttitle, :psttext, :pstexcerpts, :pststatus, :pstimage, :remove_pstimage, :category_id)
+			params.require(:articles_post).permit(:psttitle, :psttext, :pstexcerpts, :pststatus, :pstimage, :remove_pstimage, category_ids: [])
 		end
 
 	end
