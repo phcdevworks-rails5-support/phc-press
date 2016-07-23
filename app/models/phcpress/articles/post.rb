@@ -5,8 +5,8 @@ module Phcpress
 		mount_uploader :pstimage, Phcpress::PstimageUploader
 		
 		# Relationships
-		has_many :connections, class_name: 'Modules::Connection'
-		has_many :categories, class_name: 'Modules::Category', :through => :connections
+		has_many :connections, class_name: 'Phcpress::Modules::Connection', dependent: :destroy
+		has_many :categories, class_name: 'Phcpress::Modules::Category', :through => :connections
 
 	end
 end
