@@ -1,9 +1,7 @@
 <div class="row">
 	<div class="col-lg-12">
-		<%= form_for(@modules_category) do |f| %>
 
-			<!-- PHC-Notifi Render Validation -->
-			<%= render 'phcnotifi/validations', :object => @modules_category %>
+		<%= form_for(@modules_category) do |f| %>
 
 			<div class="form-group">
 				<label><%= f.label :catname, "Category Name" %></label>
@@ -15,5 +13,6 @@
 			</div>
 
 		<% end %>
+
 	</div>
 </div>
