@@ -18,7 +18,6 @@ module Phcpress
 		# Article New
 		def new
 			@articles_post = Articles::Post.new
-
 		end
 
 		# Article Edit

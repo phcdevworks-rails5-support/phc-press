@@ -52,12 +52,12 @@ module Phcpress
 
 		private
 
-		# Use callbacks to share common setup or constraints between actions.
+		# Common Callbacks
 		def set_modules_connection
 			@modules_connection = Modules::Connection.find(params[:id])
 		end
 
-		# Only allow a trusted parameter "white list" through.
+		# Whitelist
 		def modules_connection_params
 			params.require(:modules_connection).permit(:post_id, :category_id)
 		end
