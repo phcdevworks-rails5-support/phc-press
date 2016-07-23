@@ -31,7 +31,7 @@
 						<%= f.file_field :pstimage, class: "form-control" %>
 					</div>
 					<% if f.object.pstimage? %>
-						<%= image_tag f.object.pstimage, class: "img-responsive img-thumbnail" %>
+						<%= image_tag f.object.pstimage_url, class: "img-responsive img-thumbnail" %>
 						<%= f.label :remove_pstimage %>
 						<%= f.check_box :remove_pstimage %>
 					<% end %>
@@ -44,7 +44,7 @@
 				</div>
 				<div class="panel-body">
 					<div class="form-group">
-						<%= f.collection_check_boxes :category_ids, Phcpress::Modules::Category.all, :id, :catname do |post_category| %>
+						<%= f.collection_check_boxes :category_ids, Phcpresspro::Modules::Category.all, :id, :catname do |post_category| %>
 							<%= post_category.check_box %>
 							<%= post_category.label %></br>
 						<% end %>
