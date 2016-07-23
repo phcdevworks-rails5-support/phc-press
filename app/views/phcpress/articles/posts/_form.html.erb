@@ -44,7 +44,7 @@
 				</div>
 				<div class="panel-body">
 					<div class="form-group">
-						<%= f.collection_check_boxes :category_ids, Phcpresspro::Modules::Category.all, :id, :catname do |post_category| %>
+						<%= f.collection_check_boxes :category_ids, Phcpress::Modules::Category.all, :id, :catname do |post_category| %>
 							<%= post_category.check_box %>
 							<%= post_category.label %></br>
 						<% end %>
