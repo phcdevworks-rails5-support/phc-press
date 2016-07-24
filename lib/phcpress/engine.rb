@@ -12,6 +12,11 @@ module Phcpress
 		
 		# Load Image Processing
 		require 'carrierwave'
+		require 'cloudinary'
+
+		# UI Dependencies
+		require 'summernote-rails'
+		require 'codemirror-rails'
 
 		# Give Everything a Namespace
 		isolate_namespace Phcpress
