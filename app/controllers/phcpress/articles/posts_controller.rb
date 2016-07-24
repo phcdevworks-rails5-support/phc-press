@@ -60,7 +60,7 @@ module Phcpress
 
 		# Params Whitelist
 		def articles_post_params
-			params.require(:articles_post).permit(:psttitle, :psttext, :pstexcerpts, :pststatus, :pstimage, :remove_pstimage, category_ids: [])
+			params.require(:articles_post).permit(:psttitle, :psttext, :pststatus, :pstimage, :remove_pstimage, category_ids: [])
 		end
 
 	end

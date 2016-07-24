@@ -18,10 +18,8 @@ ActiveRecord::Schema.define(version: 20160720235314) do
     t.string   "pststatus"
     t.text     "pstexcerpts"
     t.string   "pstimage"
-    t.integer  "categories_ids_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.index ["categories_ids_id"], name: "index_phcpress_articles_posts_on_categories_ids_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "phcpress_modules_categories", force: :cascade do |t|

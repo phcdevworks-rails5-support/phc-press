@@ -5,7 +5,6 @@ class CreatePhcpressArticlesPosts < ActiveRecord::Migration[5.0]
 			t.string :psttitle
 			t.text :psttext
 			t.string :pststatus
-			t.text :pstexcerpts
 			t.string :pstimage
 
 			t.timestamps

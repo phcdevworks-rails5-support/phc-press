@@ -27,7 +27,7 @@
 							<td><%= articles_post.pststatus %></td>
 							<td><div class="btn-group" role="group" aria-label="Blog Articles">
 								<%= link_to 'Edit', edit_articles_post_path(articles_post), class: "btn btn-primary btn-xs" %>
-								<%= link_to 'Trash', articles_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+								<%= link_to 'Delete', articles_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
 							</div></td>
 						</tr>
 					<% end %>

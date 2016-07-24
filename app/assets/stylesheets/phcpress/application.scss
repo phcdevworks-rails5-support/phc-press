@@ -14,10 +14,15 @@
  *= require_self
  */
 
-// Bootstrap & Font Awesome
+// Editor: Summernote & Code Mirror
+@import "summernote";
+@import "codemirror";
+@import "codemirror/themes/solarized";
+
+// UI: Bootstrap & Font Awesome
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 
-// Custom Alterations
+// Other: Custom Alterations
 @import "custom";

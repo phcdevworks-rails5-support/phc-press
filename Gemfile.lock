@@ -1,10 +1,12 @@
 PATH
   remote: .
   specs:
-    phcpress (5.1.0)
+    phcpress (5.2.0)
       authrocket (~> 2.0, >= 2.0.2)
       bootstrap-sass (~> 3.3, >= 3.3.6)
       carrierwave (~> 0.11.2)
+      cloudinary (~> 1.2, >= 1.2.2)
+      codemirror-rails (~> 5.16)
       country_select (~> 2.5, >= 2.5.2)
       font-awesome-rails (~> 4.6, >= 4.6.3.1)
       gravtastic (~> 3.2, >= 3.2.6)
@@ -19,6 +21,7 @@ PATH
       rabl (~> 0.12.0)
       rails (~> 5.0, >= 5.0.0)
       sass-rails (~> 5.0, >= 5.0.5)
+      summernote-rails (~> 0.8.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -67,6 +70,7 @@ GEM
       ncore (~> 2.0)
     autoprefixer-rails (6.3.7)
       execjs
+    aws_cf_signer (0.1.3)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -87,6 +91,11 @@ GEM
       mimemagic (>= 0.3.0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
+    cloudinary (1.2.2)
+      aws_cf_signer
+      rest-client
+    codemirror-rails (5.16.0)
+      railties (>= 3.0, < 6.0)
     concurrent-ruby (1.0.2)
     countries (1.2.5)
       currencies (~> 0.4.2)
@@ -97,6 +106,8 @@ GEM
     currencies (0.4.2)
     database_cleaner (1.5.3)
     diff-lcs (1.2.5)
+    domain_name (0.5.20160615)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     excon (0.51.0)
     execjs (2.7.0)
@@ -113,6 +124,8 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     gravtastic (3.2.6)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     i18n_data (0.7.0)
     jquery-rails (4.1.1)
@@ -140,6 +153,7 @@ GEM
     ncore (2.0.1)
       activesupport (>= 3.2, < 5.1)
       excon (~> 0.32)
+    netrc (0.11.0)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -198,6 +212,10 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (11.2.2)
     request_store (1.3.1)
+    rest-client (2.0.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     rspec-core (3.5.1)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -237,11 +255,16 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.11)
+    summernote-rails (0.8.1.1)
+      railties (>= 3.1)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     unicode_utils (1.4.0)
     websocket (1.2.3)
     websocket-driver (0.6.4)
