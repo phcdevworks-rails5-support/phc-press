@@ -6,24 +6,28 @@
 ### PHCPress(5) (Blog & News Post Engine) Documentation
 PHCPress is a basic open source news & blog engine.
   
+- Article Posts with WYSIWYG editor preinstalled.
+- Upload images locally or use cloud services.
+- Customizable Article Categories module included.
+  
 #### Step 1 - Add PHCPress Engine to your gemfile  
 
-	gem 'phcpress', '~> 5.1'
+	gem 'phcpress', '~> 5.2', '>= 5.2.1'
 	bundle exec install
   
 #### Step 2 - Copy over database migration files  
 
-	rake phcpress:install:migrations
-	rake db:migrate
+	rails phcpress:install:migrations
+	rails db:migrate
   
 #### Step 3 - Recompile Assets  
 PHCPress included Views & UI requires bootstrap and FontAwesome.  
   
-	rake assets:clobber
-	rake assets:precompile
-
+	rails assets:clobber
+	rails assets:precompile
+  
 #### Step 4 - Setup Carrierwave (Image Uploads)  
 PHCPress default Carrierwave settings can be overwritten (suggested).  
   
 - [How to Override PHCPress Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader---Override)
-- [How to Override - Cloudinary Example](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary))
+- [How to Override - Cloudinary Example](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary)
