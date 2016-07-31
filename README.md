@@ -6,7 +6,7 @@
 ### PHCPress(5) (Blog & News Post Engine) Documentation
 PHCPress is a basic open source news & blog engine.
   
-- Article Posts with WYSIWYG editor preinstalled.
+- Website article posts with WYSIWYG editor.
 - Upload images locally or use cloud services.
 - Customizable Article Categories module included.
   
@@ -30,4 +30,4 @@ PHCPress included Views & UI requires bootstrap and FontAwesome.
 PHCPress default Carrierwave settings can be overwritten (suggested).  
   
 - [How to Override PHCPress Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader---Override)
-- [How to Override - Cloudinary Example](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary)
+- [How to Override Cloudinary Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary))
