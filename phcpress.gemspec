@@ -24,10 +24,10 @@ Gem::Specification.new do |spec|
 	spec.add_dependency 'pg', '~> 0.18.4'
 
 	# PHC Engines & Themes
-	spec.add_dependency 'phcaccountspro', '~> 2.8', '>= 2.8.2'
+	spec.add_dependency 'phcaccountspro', '~> 2.9'
 	spec.add_dependency 'phctitleseo', '~> 3.3'
 	spec.add_dependency 'phcnotifi', '~> 3.3'
-	spec.add_dependency 'phcadmins', '~> 3.8'
+	spec.add_dependency 'phcadmins', '~> 3.8', '>= 3.8.1'
 
 	# UI & Frontend Elements
 	spec.add_dependency 'jquery-rails', '~> 4.1', '>= 4.1.1'
