@@ -8,7 +8,7 @@ PHCPress is a basic open source news & blog engine.
   
 - Website article posts with WYSIWYG editor.
 - Upload images locally or use cloud services.
-- Customizable Article Categories module included.
+- Customizable article categories module included.
   
 #### Step 1 - Add PHCPress Engine to your gemfile  
 
