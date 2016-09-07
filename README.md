@@ -1,8 +1,8 @@
 [![security](https://hakiri.io/github/PHCNetworks/phc-press/master.svg)](https://hakiri.io/github/PHCNetworks/phc-press/master)
 [![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-press/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
-[![Issue Count](https://codeclimate.com/github/PHCNetworks/phc-press/badges/issue_count.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
+[![Dependency Status](https://gemnasium.com/badges/github.com/PHCNetworks/phc-press.svg)](https://gemnasium.com/github.com/PHCNetworks/phc-press)
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
-  
+    
 ### PHCPress(5) (Blog & News Post Engine) Documentation
 PHCPress is a basic open source news & blog engine.
   
@@ -12,7 +12,7 @@ PHCPress is a basic open source news & blog engine.
   
 #### Step 1 - Add PHCPress Engine to your gemfile  
 
-	gem 'phcpress', '~> 5.3', '>= 5.3.3'
+	gem 'phcpress', '~> 5.3', '>= 5.3.4'
 	bundle install
   
 #### Step 2 - Copy over database migration files  
