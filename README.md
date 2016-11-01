@@ -12,7 +12,7 @@ PHCPress is a basic open source news & blog engine.
   
 #### Step 1 - Add PHCPress Engine to your gemfile  
 
-	gem 'phcpress', '~> 5.3', '>= 5.3.7'
+	gem 'phcpress', '~> 5.3', '>= 5.3.8'
 	bundle install
   
 #### Step 2 - Copy over database migration files  
