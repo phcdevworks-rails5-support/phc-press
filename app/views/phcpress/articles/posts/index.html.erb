@@ -1,12 +1,40 @@
+<!-- Title Variables -->
+<% phc_title "PHCPress - Articles Manager" %>
+<% phc_title_tagline "Article Index" %>
+
+<!-- Page Header -->
+<div class="row">
+	<div class="col-lg-12">
+
+		<!-- Bread Crumbs -->
+		<ol class="breadcrumb">
+			<li><%= link_to "Dashboard", articles_posts_path %></li>
+			<li class="active"><%= yield(:phc_title_tagline) %></li>
+		</ol>
+
+		<!-- Page Title -->
+		<h3 class="page-title">
+			<%= yield(:phc_title) %> </br>
+			<small><%= yield(:phc_title_tagline) %></small>
+		</h3>
+
+	</div>
+</div>
+
+
 <!-- Main Content -->
-<div class="wrapper wrapper-content">
-	<div class="panel panel-primary">
+<div class="row">
+	<div class="col-lg-12">
 
-		<div class="panel-heading">
-			<i class="fa fa-pencil-square-o"></i> Article List
-		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="caption">
+					<span class="caption-subject bold uppercase">Article List</span>
+				</div>
+			</div>
 
-		<div class="panel-body">
+
+	<div class="panel-body">
 
 			<table class="table table-bordered table-striped table-hover">
 
