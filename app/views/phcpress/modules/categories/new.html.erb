@@ -1,6 +1,6 @@
 <!-- Title System -->
 <% phc_title "PHCPress - Categories Manager" %>
-<% phc_title_tagline "Update Category" %>
+<% phc_title_tagline "New Category" %>
 <!-- Title System -->
 
 <!-- Page Title Bar -->
@@ -9,7 +9,7 @@
 	<!-- Page Title and BreadCrumb -->
 	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
 	<ol class="breadcrumb">
-		<li><%= link_to "Directory Index", articles_posts_path %></li>
+		<li><%= link_to "Categories Index", modules_categories_path %></li>
 		<li class="active"><%= yield(:phc_title_tagline) %></li>
 	</ol>
 	<!-- Page Title and BreadCrumb -->
