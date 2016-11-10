@@ -9,14 +9,13 @@
 	<!-- Page Title and BreadCrumb -->
 	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
 	<ol class="breadcrumb">
-		<li><%= link_to "Category Index", modules_categories_path %></li>
 		<li class="active"><%= yield(:phc_title_tagline) %></li>
 	</ol>
 	<!-- Page Title and BreadCrumb -->
 
 </section>
 <!-- Page Title Bar -->
-<!-- Main Content -->
+
 <!-- Main Content -->
 <section class="content">
 	<div class="row">
@@ -50,7 +49,7 @@
 					</table>
 				</div>
 				<div class="box-footer clearfix">
-					<%= link_to 'New Blog Post', new_articles_post_path, class: "btn btn-primary" %>
+					<%= link_to 'New Category', new_moudles_category_path, class: "btn btn-primary" %>
 				</div>
 			</div>
 
