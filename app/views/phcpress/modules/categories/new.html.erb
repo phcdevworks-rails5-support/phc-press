@@ -1,1 +1,37 @@
-<%= render 'form', modules_category: @modules_category %>
+<!-- Title System -->
+<% phc_title "PHCPress - Categories Manager" %>
+<% phc_title_tagline "Update Category" %>
+<!-- Title System -->
+
+<!-- Page Title Bar -->
+<section class="content-header">
+
+	<!-- Page Title and BreadCrumb -->
+	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
+	<ol class="breadcrumb">
+		<li><%= link_to "Directory Index", articles_posts_path %></li>
+		<li class="active"><%= yield(:phc_title_tagline) %></li>
+	</ol>
+	<!-- Page Title and BreadCrumb -->
+
+</section>
+<!-- Page Title Bar -->
+
+<!-- Main Content -->
+<section class="content">
+	<div class="row">
+		<div class="col-lg-12">
+
+			<div class="box">
+				<div class="box-header with-border">
+					<h3 class="box-title"><%= yield(:phc_title) %></h3>
+				</div>
+				<div class="box-body">
+					<%= render 'form', modules_category: @modules_category %>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- Main Content -->

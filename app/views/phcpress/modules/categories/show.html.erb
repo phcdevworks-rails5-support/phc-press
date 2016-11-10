@@ -1,3 +1,22 @@
+<!-- Title System -->
+<% phc_title "PHCPress - Categories Manager" %>
+<% phc_title_tagline "Update Category Information" %>
+<!-- Title System -->
+
+<!-- Page Title Bar -->
+<section class="content-header">
+
+	<!-- Page Title and BreadCrumb -->
+	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
+	<ol class="breadcrumb">
+		<li><%= link_to "Article Index", articles_posts_path %></li>
+		<li class="active"><%= yield(:phc_title_tagline) %></li>
+	</ol>
+	<!-- Page Title and BreadCrumb -->
+
+</section>
+<!-- Page Title Bar -->
+
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'Edit', edit_modules_category_path(@modules_category) %> |
