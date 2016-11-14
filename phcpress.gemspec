@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 	spec.email       = ["developers@phcnetworks.net"]
 	spec.homepage    = "https://webdev.phcnetworks.net/"
 	spec.summary     = "News & Blog Posts Engine"
-	spec.description = "PHCPress(5) is a basic open source news & blog engine."
+	spec.description = "PHCPress(6) is a basic open source simple news engine."
 	spec.license     = "MIT"
 
 	spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

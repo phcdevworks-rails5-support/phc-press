@@ -3,8 +3,8 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/PHCNetworks/phc-press.svg)](https://gemnasium.com/github.com/PHCNetworks/phc-press)
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
     
-### PHCPress(5) (Blog & News Post Engine) Documentation
-PHCPress is a basic open source news & blog engine.
+### PHCPress(6) (News/Blog Engine) Documentation
+PHCPress is a basic open source news engine.
   
 - Website article posts with WYSIWYG editor.
 - Upload images locally or use cloud services.
@@ -12,7 +12,7 @@ PHCPress is a basic open source news & blog engine.
   
 #### Step 1 - Add PHCPress Engine to your gemfile  
 
-	gem 'phcpress', '~> 5.3', '>= 5.3.8'
+	gem 'phcpress', '~> 6.0'
 	bundle install
   
 #### Step 2 - Copy over database migration files  
