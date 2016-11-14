@@ -2,44 +2,44 @@
 	<ul class="sidebar-menu">
 		<li class="<%= is_active_controller('phcmemberspro/member/profiles') %> treeview">
 			<%= link_to "#" do %>
-				<i class="fa fa-users"></i> <span>Member Information</span>
+				<i class="fa fa-users"></i> <span>Articles</span>
 				<span class="pull-right-container">
 					<i class="fa fa-angle-left pull-right"></i>
 				</span>
 			<% end %>
 			<ul class="treeview-menu">
 				<li class="">
-					<%= link_to member_profiles_path do %>
+					<%= link_to articles_posts_path do %>
 						<i class="fa fa-circle-o"></i> 
-						Members List
+						Article Index
 					<% end %>
 				</li>
 				<li class="">
-					<%= link_to new_member_profile_path do  %>
+					<%= link_to new_articles_post_path do  %>
 						<i class="fa fa-circle-o"></i> 
-						Add a New Member
+						New Article
 					<% end %>
 				</li>
 			</ul>
 		</li>
 		<li class="<%= is_active_controller('phcmemberspro/member/profiles') %> treeview">
 			<%= link_to "#" do %>
-				<i class="fa fa-dashboard"></i> <span>Directories & Listings</span>
+				<i class="fa fa-dashboard"></i> <span>Categories</span>
 				<span class="pull-right-container">
 					<i class="fa fa-angle-left pull-right"></i>
 				</span>
 			<% end %>
 			<ul class="treeview-menu">
 				<li class="">
-					<%= link_to directory_categories_path do %>
+					<%= link_to modules_categories_path do %>
 						<i class="fa fa-circle-o"></i> 
 						Category List
 					<% end %>
 				</li>
 				<li class="">
-					<%= link_to new_directory_category_path do  %>
+					<%= link_to new_module_category_path do  %>
 						<i class="fa fa-circle-o"></i> 
-						Add a New Category
+						New Category
 					<% end %>
 				</li>
 			</ul>
