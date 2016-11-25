@@ -13,6 +13,7 @@ module Phcpress
 
 		# Article Show
 		def show
+			@frontend_article = Articles::Post.find(params[:id])
 		end
 
 	end
