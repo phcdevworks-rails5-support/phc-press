@@ -5,11 +5,12 @@ module Phcpress
 
 		# Article Index
 		def index
-			@articles_posts = Articles::Post.all
+			@frontend_articles = Articles::Post.all
 		end
 
 		# Article Show
 		def show
+			@frontend_article = Articles::Post.find(params[:id])
 		end
 
 	end
