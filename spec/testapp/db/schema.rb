@@ -10,16 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720235314) do
+ActiveRecord::Schema.define(version: 20161124161206) do
 
   create_table "phcpress_articles_posts", force: :cascade do |t|
     t.string   "psttitle"
     t.text     "psttext"
     t.string   "pststatus"
-    t.text     "pstexcerpts"
     t.string   "pstimage"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "phcpress_frontend_articles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "phcpress_modules_categories", force: :cascade do |t|
