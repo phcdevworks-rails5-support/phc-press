@@ -4,30 +4,31 @@
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
     
 ### PHCPress(6) (News/Blog Engine) Documentation
-PHCPress(6) rails CMS engine to manage articles, categories and media.
+PHCPress(6) rails CMS engine to manage your website's articles, categories and media.
   
 - Website article posts with WYSIWYG editor.
 - Upload images locally or use any popular cloud service.
 - Customizable article categories module included.
   
-#### Step 1 - Add PHCPress Engine to your gemfile  
+#### Step 1 - Add PHCPress to your gemfile 
 
-	gem 'phcpress', '~> 6.1', '>= 6.1.4'
+	gem 'phcpress', '~> 6.2'
 	bundle install
   
-#### Step 2 - Copy over database migration files  
-
+#### Step 2 - Copy PHCPress Database Tables  
+To copy PHCPress' requried database migrations, copy each command individually to your terminal's command line.  
+  
 	rails phcpress:install:migrations
 	rails db:migrate
   
 #### Step 3 - Recompile Assets  
-PHCPress included Views & UI requires bootstrap and FontAwesome.  
+To properly function re-compile your application's assets to copy over requried files.
   
 	rails assets:clobber
 	rails assets:precompile
   
-#### Step 4 - Setup Carrierwave (Image Uploads)  
-PHCPress default Carrierwave settings can be overwritten (suggested).  
+#### How to Setup Image Uploads
+PHCPress default Carrierwave settings can be overwritten.  
   
 - [How to Override PHCPress Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader---Override)
 - [How to Override Cloudinary Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary))
