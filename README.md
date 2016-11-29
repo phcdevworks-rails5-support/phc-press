@@ -4,15 +4,15 @@
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
     
 ### PHCPress(6) (News/Blog Engine) Documentation
-PHCPress is a basic open source news engine.
+PHCPress(6) rails CMS engine to manage articles, categories and media.
   
 - Website article posts with WYSIWYG editor.
-- Upload images locally or use cloud services.
+- Upload images locally or use any popular cloud service.
 - Customizable article categories module included.
   
 #### Step 1 - Add PHCPress Engine to your gemfile  
 
-	gem 'phcpress', '~> 6.1', '>= 6.1.1'
+	gem 'phcpress', '~> 6.1', '>= 6.1.4'
 	bundle install
   
 #### Step 2 - Copy over database migration files  
