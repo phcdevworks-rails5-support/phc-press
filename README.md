@@ -27,6 +27,11 @@ To properly function re-compile your application's assets to copy over requried 
 	rails assets:clobber
 	rails assets:precompile
   
+#### Step 4 - Generate Contact Form View (Customization)  
+All PHCPress views and layouts can be overwritten by copying files to your application.
+
+	rails generate phcpress:views 
+  
 #### How to Setup Image Uploads
 PHCPress default Carrierwave settings can be overwritten.  
   
