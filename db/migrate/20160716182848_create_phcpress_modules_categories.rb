@@ -1,5 +1,6 @@
 class CreatePhcpressModulesCategories < ActiveRecord::Migration[5.0]
 	def change
+
 		create_table :phcpress_modules_categories do |t|
 
 			t.string :catname
@@ -7,5 +8,6 @@ class CreatePhcpressModulesCategories < ActiveRecord::Migration[5.0]
 			t.timestamps
 
 		end
+
 	end
 end

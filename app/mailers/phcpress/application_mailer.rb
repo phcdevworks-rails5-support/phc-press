@@ -1,6 +1,8 @@
 module Phcpress
+
 	class ApplicationMailer < ActionMailer::Base
-		default from: 'no-reply@phcnetworks.net'
+		default from: 'info@phcnetworks.net'
 		layout 'mailer'
 	end
+
 end
