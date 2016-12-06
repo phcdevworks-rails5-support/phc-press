@@ -21,13 +21,18 @@ To copy PHCPress' requried database migrations, copy each command individually t
 	rails phcpress:install:migrations
 	rails db:migrate
   
-#### Step 3 - Recompile Assets  
+#### Step 3 - Mount PHCPress & Add Routes
+Mount PHCPress by adding code below to your routes file.  
+  
+	mount Phcpress::Engine, :at => '/'
+  
+#### Step 4 - Recompile Assets  
 To properly function re-compile your application's assets to copy over requried files.
   
 	rails assets:clobber
 	rails assets:precompile
   
-#### Step 4 - Generate Contact Form View (Customization)  
+#### Step 5 - Generate Contact Form View (Customization)  
 All PHCPress views and layouts can be overwritten by copying files to your application.
 
 	rails generate phcpress:views 
