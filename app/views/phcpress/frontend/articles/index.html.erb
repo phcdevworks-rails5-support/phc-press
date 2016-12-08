@@ -1,4 +1,76 @@
+<!-- Title System -->
+<% phc_title "PHCNetworks Blog" %>
+<% phc_title_tagline "News & Information" %>
+<!-- Title System -->
 
-<% @frontend_articles.each do |frontend_article| %>
-<%= link_to 'Show', frontend_article_path(frontend_article) %>
-<% end %>
+<!-- Page Header -->
+<section class="page-header dark page-header-xs">
+	<div class="container">
+		<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
+	</div>
+</section>
+<!-- Page Header -->
+
+<!-- Page Content -->
+<section>
+	<div class="container">
+		<div class="row">
+
+			<!-- Left Sidebar -->
+			<div class="col-md-3 col-sm-3">
+			</div>
+			<!-- Left Sidebar -->
+
+			<!-- Blog List -->
+			<div class="col-md-9 col-sm-9">
+
+				<% @articles_index.each do |frontend_article| %>
+					<div class="blog-post-item">
+						<% if frontend_article.pstimage? %>
+							<figure class="margin-bottom-20">
+								<%= link_to phcpress.frontend_article_path(frontend_article) do %>
+									<%= image_tag frontend_article.pstimage_url, class: "img-responsive" %>
+								<% end %>
+							</figure>
+						<% end %>
+						<h2><%= link_to frontend_article.psttitle, phcpress.frontend_article_path(frontend_article) %></h2>
+						<ul class="blog-post-info list-inline">
+							<li>
+								<%= link_to "#" do %>
+									<i class="fa fa-clock-o"></i> 
+									<span class="font-lato"><%= frontend_article.created_at %></span>
+								<% end %>
+							</li>
+							<li>
+								<%= link_to "#" do %>
+									<i class="fa fa-comment-o"></i> 
+									<span class="font-lato">0 Comments</span>
+								<% end %>
+							</li>
+							<li>
+								<i class="fa fa-folder-open-o"></i>
+								<%= link_to "#" do %>
+									<span class="font-lato">Design</span>
+								<% end %>
+								<%= link_to "#" do %>
+									<span class="font-lato">Photography</span>
+								<% end %>
+							</li>
+							<li>
+								<%= link_to "#" do %>
+									<i class="fa fa-user"></i> 
+									<span class="font-lato"><%= frontend_article.user_name %></span>
+								<% end %>
+							</li>
+						</ul>
+						<div><%= truncate(frontend_article.psttext, :length => 420, :escape => false) %></div>
+					</div>
+				<% end %>
+
+			</div>
+			<!-- Blog List -->
+
+		</div>
+	</div>
+<section>
+<!-- Page Content -->

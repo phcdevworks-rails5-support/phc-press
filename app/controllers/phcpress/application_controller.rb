@@ -1,7 +1,7 @@
 module Phcpress
 	class ApplicationController < ActionController::Base
 
-		# Prevent CSRF attacks by raising an exception.
+		# Security Filters
 		protect_from_forgery with: :exception
 
 		# Load Helpers

@@ -1,19 +1,19 @@
 require_dependency "phcpress/application_controller"
 
-module Phcpress
+module Phcpresspro
 	class Frontend::ArticlesController < ApplicationController
 
-		# Layouts and Filters
-		layout "phcpress/frontend"
+		# Security & Filters
+		layout '/layouts/phcpress/frontend.html.erb'
 
 		# Article Index
 		def index
-			@frontend_articles = Articles::Post.all
+			@articles_index = Articles::Post.all
 		end
-
-		# Article Show
+	
+		# Single Article Post
 		def show
-			@frontend_article = Articles::Post.find(params[:id])
+			@articles_single = Articles::Post.find(params[:id])
 		end
 
 	end
