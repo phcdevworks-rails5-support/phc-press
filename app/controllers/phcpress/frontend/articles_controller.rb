@@ -1,6 +1,6 @@
 require_dependency "phcpress/application_controller"
 
-module Phcpresspro
+module Phcpress
 	class Frontend::ArticlesController < ApplicationController
 
 		# Security & Filters
