@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcpress (6.2.4)
+    phcpress (6.2.5)
       bootstrap-sass (~> 3.3, >= 3.3.7)
       carrierwave (~> 0.11.2)
       cloudinary (~> 1.2, >= 1.2.4)
@@ -96,7 +96,7 @@ GEM
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
     concurrent-ruby (1.0.2)
-    countries (2.0.4)
+    countries (2.0.5)
       i18n_data (~> 0.7.0)
       money (~> 6.7)
       unicode_utils (~> 1.4)
