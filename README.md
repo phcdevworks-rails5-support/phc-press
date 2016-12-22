@@ -10,9 +10,9 @@ PHCPress(6) rails CMS engine to manage your website's articles, categories and m
 - Upload images locally or use any popular cloud service.
 - Customizable article categories module included.
   
-#### Step 1 - Add PHCPress to your gemfile 
+#### Step 1 - Add PHCPress to your gemfile  and run command  
 
-	gem 'phcpress', '~> 6.2', '>= 6.2.6'
+	gem 'phcpress'
 	bundle install
   
 #### Step 2 - Copy PHCPress Database Tables  
