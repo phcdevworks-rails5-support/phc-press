@@ -1,7 +1,7 @@
 module Phcpress
 
 	class ApplicationMailer < ActionMailer::Base
-		default from: 'info@phcnetworks.net'
+		default from: 'info@example.com'
 		layout 'mailer'
 	end
 
