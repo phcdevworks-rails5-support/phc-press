@@ -2,13 +2,13 @@
 [![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-press/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
 [![Dependency Status](https://gemnasium.com/badges/github.com/PHCNetworks/phc-press.svg)](https://gemnasium.com/github.com/PHCNetworks/phc-press)
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)  
-    
+
 ### PHCPress(6) (News/Blog Engine) Documentation
 PHCPress(6) rails CMS engine to manage your website's articles, categories and media.
   
-- Website article posts with WYSIWYG editor.
-- Upload images locally or use any popular cloud service.
-- Customizable article categories module included.
+* Website article posts with WYSIWYG editor.
+* Upload images locally or use any popular cloud service.
+* Customizable article categories module included.
   
 #### Step 1 - Add PHCPress to your gemfile  and run command  
 
