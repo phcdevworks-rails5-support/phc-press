@@ -11,7 +11,7 @@ PHCPress(6) rails CMS engine to manage your website's articles, categories and m
 * Customizable article categories module included.
   
 #### Step 1 - Add PHCPress to your gemfile  and run command  
-
+  
 	gem 'phcpress', '~> 6.5'
 	bundle install
   
@@ -34,7 +34,7 @@ To properly function re-compile your application's assets to copy over requried 
   
 #### Step 5 - Generate Contact Form View (Customization)  
 All PHCPress views and layouts can be overwritten by copying files to your application.
-
+  
 	rails generate phcpress:views 
   
 #### How to Setup Image Uploads
