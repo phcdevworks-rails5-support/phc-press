@@ -1,12 +1,24 @@
 module Phcpress
-	class Articles::Post < ApplicationRecord
+  class Articles::Post < ApplicationRecord
+  
+    # For Image Uploads
+    mount_uploader :pstimage, Phcpresspro::PstimageUploader
+    
+    # Relationships
+    has_many :connections, class_name: 'Phcpress::Modules::Connection', dependent: :destroy
+    has_many :categories, class_name: 'Phcpress::Modules::Category', :through => :connections
+    
+    # Validation for Form Fields
+    validates :psttitle,
+      presence: true,
+      length: { minimum: 3 }
 
-		# For Image Uploads
-		mount_uploader :pstimage, Phcpress::PstimageUploader
-		
-		# Relationships
-		has_many :connections, class_name: 'Phcpress::Modules::Connection', dependent: :destroy
-		has_many :categories, class_name: 'Phcpress::Modules::Category', :through => :connections
+    validates :psttext,
+      presence: true,
+      length: { minimum: 3 }
 
-	end
+    validates :pststatus,
+      presence: true
+  
+  end
 end

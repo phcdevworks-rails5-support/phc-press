@@ -26,6 +26,13 @@ module Phcpress
     require 'multi_json'
     require 'responders'
     
+    # WYSIWYG Editor Dependencies
+    require 'tinymce-rails'
+    
+    # Upload & Media Dependencies
+    require 'carrierwave'
+    require 'cloudinary'
+    
     # Isolate Namespace
     isolate_namespace Phcpress
     

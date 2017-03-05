@@ -62,8 +62,8 @@
 				</div>
 				<div class="panel-body">
 					<div class="form-group">
-						<%= f.label :psttitle, "Title" %>
-						<%= f.text_field :psttitle, class: "form-control" %>
+						<%= f.label :psttext, "News Post Text" %>
+						<%= f.text_area :psttext, :class => "tinymce form-control", :rows => 15, :cols => 60 %>
 					</div>
 					<div class="form-group">
 						<%= f.text_area :psttext, class: "post_edit_box form-control" %>
