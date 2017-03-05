@@ -2,7 +2,7 @@ module Phcpress
   class Articles::Post < ApplicationRecord
   
     # For Image Uploads
-    mount_uploader :pstimage, Phcpresspro::PstimageUploader
+    mount_uploader :pstimage, Phcpress::PstimageUploader
     
     # Relationships
     has_many :connections, class_name: 'Phcpress::Modules::Connection', dependent: :destroy
