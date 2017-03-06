@@ -1,7 +1,7 @@
 module Phcpress
   module Modules
     def self.table_name_prefix
-      'phcpresspro_modules_'
+      'phcpress_modules_'
     end
   end
 end
