@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.authors     = ["BradPotts"]
   spec.email       = ["info@phcnetworks.net"]
   spec.homepage    = "https://phcnetworks.net/"
-  spec.summary     = "PHCPress - Rails CMS Engine"
+  spec.summary     = "PHCPress(6) - Rails CMS Engine"
   spec.description = "PHCPress(6) rails CMS engine to manage your website's articles, categories and media."
   spec.license     = "MIT"
 
