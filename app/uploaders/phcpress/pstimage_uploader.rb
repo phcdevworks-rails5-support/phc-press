@@ -13,7 +13,7 @@ class Phcpress::PstimageUploader < CarrierWave::Uploader::Base
 	def extension_white_list
 		%w(jpg jpeg gif png)
 	end
-	
+
 	# Hash filenames
 	def filename
 		"#{secure_token}.#{file.extension}" if original_filename.present?
