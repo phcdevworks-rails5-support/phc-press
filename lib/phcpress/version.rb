@@ -1,3 +1,3 @@
 module Phcpress
-  VERSION = "8.0.0b"
+  VERSION = "8.0.0"
 end
