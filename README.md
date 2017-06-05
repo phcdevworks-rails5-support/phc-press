@@ -4,8 +4,8 @@
 [![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PHCNetworks/phc-press/blob/master/MIT-LICENSE)  
 
-### PHCPress(8) (News/Blog Engine) Documentation
-PHCPress(8) rails CMS engine to manage your website's articles, categories and media.
+### PHCPress (News/Blog Engine) Documentation
+PHCPress rails CMS engine to manage your website's articles, categories and media.
 
 * Website article posts with WYSIWYG editor.
 * Upload images locally or use any popular cloud service.
@@ -13,7 +13,7 @@ PHCPress(8) rails CMS engine to manage your website's articles, categories and m
 
 #### Step 1 - Add PHCPress to your gemfile  and run command  
 
-	gem 'phcpress', '~> 8.0'
+	gem 'phcpress', '~> 9.1', '>= 9.1.1'
 	bundle install
 
 #### Step 2 - Copy PHCPress Database Tables  
