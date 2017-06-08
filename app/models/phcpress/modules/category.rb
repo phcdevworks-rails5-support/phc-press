@@ -4,8 +4,8 @@ module Phcpress
     # Clean URL Initialize
     extend FriendlyId
 
-    # Paper_tail Initialize
-    has_paper_trail
+    # Add Paper Trail
+    has_paper_trail :class_name => 'Phcpress::CategoryVersions'
 
     # Relationships
     has_many :connections, class_name: 'Phcpress::Modules::Connection', dependent: :destroy
@@ -15,6 +15,16 @@ module Phcpress
     validates :catname,
       presence: true,
       length: { minimum: 3 }
+
+    # Clean URL Define
+    friendly_id :phcpress_category_slug, use: [:slugged, :finders]
+
+    # Define for Multiple Records
+    def phcpress_category_slug
+      [
+        [:catname]
+      ]
+    end
 
   end
 end

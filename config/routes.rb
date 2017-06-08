@@ -14,7 +14,7 @@ Phcpress::Engine.routes.draw do
   end
 
   # Article Routes
-  namespace :articles do
+  namespace :article do
     resources :posts, class_name: 'Phcpress::Articles::Post'
   end
 
