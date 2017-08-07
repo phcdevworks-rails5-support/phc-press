@@ -13,7 +13,7 @@ PHCPress rails CMS engine to manage your website's articles, categories and medi
 
 #### Step 1 - Add PHCPress to your gemfile  and run command  
 
-	gem 'phcpress', '~> 12.3'
+	gem 'phcpress', '~> 13.0'
 	bundle install
 
 #### Step 2 - Copy PHCPress Database Tables  
