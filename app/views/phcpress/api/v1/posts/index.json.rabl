@@ -1,2 +1,2 @@
-object @articles_posts
+object @article_posts
 	attributes :id, :psttitle, :psttext, :pststatus, :pstimage

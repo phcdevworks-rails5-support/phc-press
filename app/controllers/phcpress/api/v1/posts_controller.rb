@@ -1,4 +1,4 @@
-require_dependency "phcpress/application_controller"
+require_dependency "phcpresspro/application_controller"
 
 module Phcpress
   class Api::V1::PostsController < ApplicationController
@@ -8,7 +8,12 @@ module Phcpress
 
     # Article Category API
     def index
-      @articles_posts = Articles::Post.order('psttitle ASC')
+      @article_posts = Article::Post.order('psttitle ASC')
+    end
+
+    # Article Show
+    def show
+      @article_post = Article::Post.find(params[:id])
     end
 
   end
