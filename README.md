@@ -13,7 +13,7 @@ PHCPress rails CMS engine to manage your website's articles, categories and medi
 
 #### Step 1 - Add PHCPress to your gemfile  and run command  
 
-	gem 'phcpress', '~> 13.0'
+	gem 'phcpress', '~> 14.1'
 	bundle install
 
 #### Step 2 - Copy PHCPress Database Tables  
@@ -28,7 +28,7 @@ Mount PHCPress by adding code below to your routes file.
 	mount Phcpress::Engine, :at => '/'
 
 #### Step 4 - Recompile Assets  
-To properly function re-compile your application's assets to copy over requried files.
+To properly function re-compile your application's assets to copy over required files.
 
 	rails assets:clobber
 	rails assets:precompile
