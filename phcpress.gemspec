@@ -51,6 +51,9 @@ Gem::Specification.new do |spec|
   # URL Dependencies
   spec.add_dependency 'friendly_id', '~> 5.2', '>= 5.2.1'
 
+  # API Dependencies
+  spec.add_dependency 'httparty', '~> 0.15.6'
+
   # PHCEngine Dependencies
   spec.add_dependency 'phcnotifi', '~> 8.0'
   spec.add_dependency 'phctitleseo', '~> 9.0'

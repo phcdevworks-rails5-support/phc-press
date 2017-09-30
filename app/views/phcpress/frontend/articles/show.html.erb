@@ -1,72 +1,35 @@
 <!-- Title System -->
-<% phc_title "Blog" %>
-<% phc_title_tagline "PHCNetworks News & Information" %>
+<% phc_title "PHCNetworks Blog" %>
+<% phc_title_tagline "News & Information" %>
 <!-- Title System -->
 
 <!-- Page Header -->
 <section class="page-header dark page-header-xs">
-	<div class="container">
-		<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
-		<ol class="breadcrumb">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Blog</a></li>
-			<li class="active"><%= yield(:phc_title_tagline) %></li>
-		</ol>
-	</div>
+<div class="container">
+<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
+</div>
 </section>
 <!-- Page Header -->
 
+<!-- Page Content -->
 <section>
-	<div class="container">
-		<div class="row">
+<div class="container">
+<div class="row">
 
-			<!-- Blog List -->
-			<div class="col-md-9 col-sm-9">
-				<h1 class="blog-post-title"><%= @articles_single.psttitle %></h1>
-				<ul class="blog-post-info list-inline">
-					<li>
-						<%= link_to "#" do %>
-							<i class="fa fa-clock-o"></i>
-							<span class="font-lato"><%= @articles_single.created_at %></span>
-						<% end %>
-					</li>
-					<li>
-						<%= link_to "#" do %>
-							<i class="fa fa-comment-o"></i>
-							<span class="font-lato">0 Comments</span>
-						<% end %>
-					</li>
-					<li>
-						<i class="fa fa-folder-open-o"></i>
-						<%= link_to "#" do %>
-							<span class="font-lato">Design</span>
-						<% end %>
-						<%= link_to "#" do %>
-							<span class="font-lato">Photography</span>
-						<% end %>
-					</li>
-					<li>
-						<%= link_to "#" do %>
-							<i class="fa fa-user"></i>
-							<span class="font-lato"><%= @articles_single.user_name %></span>
-						<% end %>
-					</li>
-				</ul>
-                <% if @articles_single.pstimage? %>
-					<figure class="margin-bottom-20">
-						<%= image_tag @articles_single.pstimage_url, class: "img-responsive" %>
-					</figure>
-				<% end %>
-				<div><%= @articles_single.psttext.html_safe %></div>
-            </div>
-			<!-- Blog List -->
+<!-- Left Sidebar -->
+<div class="col-md-3 col-sm-3">
+</div>
+<!-- Left Sidebar -->
 
-			<!-- Right Sidebar -->
-			<div class="col-md-3 col-sm-3">
-			</div>
-			<!-- Right Sidebar -->
+<!-- Blog List -->
+<div class="col-md-9 col-sm-9">
+<% @phcpress_frontend_article_index.psttitle %>
 
-		</div>
-	</div>
+
+</div>
+<!-- Blog List -->
+
+</div>
+</div>
 <section>
 <!-- Page Content -->

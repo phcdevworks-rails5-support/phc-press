@@ -1,4 +1,5 @@
 require_dependency "phcpress/application_controller"
+require 'httparty'
 
 module Phcpress
   class Frontend::ArticlesController < ApplicationController
@@ -8,12 +9,12 @@ module Phcpress
 
     # Article Index
     def index
-      @articles_index = Articles::Post.all
+      @phcpress_frontend_article_list = HTTParty.get("https://#{ENV["PHC_PRESS_API_DOMAIN"]}/#{ENV["PHC_PRESS_API_FOLDER"]}/api/v1/posts.json")
     end
 
-    # Single Article Post
+    # Article Show
     def show
-      @articles_single = Articles::Post.find(params[:id])
+      @phcpress_frontend_article_post = HTTParty.get("https://#{ENV["PHC_PRESS_API_DOMAIN"]}/#{ENV["PHC_PRESS_API_FOLDER"]}/api/v1/posts.json")
     end
 
   end
