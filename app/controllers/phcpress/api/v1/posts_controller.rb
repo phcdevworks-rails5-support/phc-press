@@ -8,7 +8,7 @@ module Phcpress
 
     # Article Category API
     def index
-      @article_posts = Article::Post.where(poststatus: published).order('created_at ASC')
+      @article_posts = Article::Post.where(poststatus: 'published').order('created_at ASC')
     end
 
     # Article Show
