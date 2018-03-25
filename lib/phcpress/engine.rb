@@ -3,6 +3,7 @@ module Phcpress
 
     # Main Dependencies
     require 'paper_trail'
+		require 'phcaccountspro'
 
 		# PHCEngines & Theme Dependencies
     require 'phcnotifi'
@@ -23,6 +24,7 @@ module Phcpress
     require 'webpacker'
 
     # API Dependencies
+    require 'httparty'
     require 'rabl'
     require 'oj'
     require 'multi_json'
