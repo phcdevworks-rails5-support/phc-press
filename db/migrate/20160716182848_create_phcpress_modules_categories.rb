@@ -1,4 +1,4 @@
-class CreatePhcpressModulesCategories < ActiveRecord::Migration[5.1]
+class CreatePhcpressModulesCategories < ActiveRecord::Migration[5.2]
   def change
 
     create_table :phcpress_modules_categories do |t|

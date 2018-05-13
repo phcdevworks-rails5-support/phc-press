@@ -1,4 +1,4 @@
-class CreatePhcpressModulesConnections < ActiveRecord::Migration[5.1]
+class CreatePhcpressModulesConnections < ActiveRecord::Migration[5.2]
   def change
 
     create_table :phcpress_modules_connections do |t|

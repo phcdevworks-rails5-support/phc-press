@@ -1,4 +1,4 @@
-class CreatePhcpressFriendlyIdSlugs < ActiveRecord::Migration[5.1]
+class CreatePhcpressFriendlyIdSlugs < ActiveRecord::Migration[5.2]
   def change
 
     create_table :phcpress_friendly_id_slugs do |t|

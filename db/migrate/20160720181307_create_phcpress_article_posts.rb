@@ -1,4 +1,4 @@
-class CreatePhcpressArticlePosts < ActiveRecord::Migration[5.1]
+class CreatePhcpressArticlePosts < ActiveRecord::Migration[5.2]
   def change
 
     create_table :phcpress_article_posts do |t|
