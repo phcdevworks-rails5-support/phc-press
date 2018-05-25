@@ -1,0 +1,80 @@
+<div class="row">
+	<%= form_for(@article_post, :html => {:multipart => true}) do |f| %>
+
+		<!-- PHC-Notifi Render Validation -->
+		<%= render 'phcnotifi/validations', :object => @article_post %>
+
+		<div class="col-md-3">
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<i class="fa fa-paper-plane-o"></i> Publish Panel
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<%= f.label :pststatus, "Post Status" %>
+						<%= f.select( :pststatus, [['Draft','draft'],['Publish','publish'],['Review','review']], {}, {class: "form-control form-control-sm"}) %>
+					</div>
+					<div class="actions">
+						<%= f.submit "Publish", class: "btn btn-primary btn-sm" %>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<i class="fa fa-camera-retro"></i> Post Images
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<%= f.label :pstimage, "Featured Image" %>
+						<%= f.file_field :pstimage, class: "form-control" %>
+					</div>
+					<% if f.object.pstimage? %>
+						<%= image_tag f.object.pstimage_url, class: "img-responsive img-thumbnail" %>
+						<%= f.label :remove_pstimage %>
+						<%= f.check_box :remove_pstimage %>
+					<% end %>
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<i class="fa fa-sitemap"></i> Post Categories &amp; Tags
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<%= f.collection_check_boxes :category_ids, Phcpress::Modules::Category.all, :id, :catname do |post_category| %>
+							<%= post_category.check_box %>
+							<%= post_category.label %></br>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-md-9 ">
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<i class="fa fa-pencil-square-o"></i> Blog Post Publisher
+				</div>
+				<div class="panel-body">
+					<%= render 'phcnotifi/validations', :object => @article_post %>
+					<div class="form-group">
+						<%= f.label :psttext, "Post Title" %>
+						<%= f.text_field :psttitle, class: "form-control" %>
+					</div>
+					<div class="form-group">
+						<%= f.label :psttext, "Post Text" %>
+						<%= f.text_area :psttext, :class => "tinymce form-control", :rows => 20, :cols => 60 %>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	<% end %>
+</div>
+
+<!-- Tinymce Javascript -->
+<%= tinymce %>

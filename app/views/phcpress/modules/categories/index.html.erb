@@ -1,0 +1,66 @@
+<!-- Title System -->
+<% phc_title "Plugin: Article Category Manager" %>
+<% phc_title_tagline "Category Index" %>
+<% phc_breadcrumb_one yield(:phc_title_tagline) %>
+<!-- Title System -->
+
+<!-- Page Title Bar -->
+<section class="content-header">
+	<!-- Page Title and BreadCrumb -->
+	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
+	<ol class="breadcrumb">
+		<li><%= yield(:phc_breadcrumb_one) %></li>
+		<li class="active"><%= yield(:phc_breadcrumb_two) %></li>
+	</ol>
+	<!-- Page Title and BreadCrumb -->
+</section>
+<!-- Page Title Bar -->
+
+<!-- Main Content -->
+<section class="content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="box">
+				<div class="box-header with-border">
+					<h3 class="box-title"><%= yield(:phc_title) %></h3>
+				</div>
+				<div class="box-body">
+
+					<!-- Index Table -->
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped table-hover">
+							<thead>
+								<tr>
+									<th>Category Name</th>
+									<th></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<% @modules_categories.each do |modules_category| %>
+									<tr>
+										<td><%= modules_category.catname %></td>
+										<td><div class="btn-group" role="group" aria-label="Blog Articles">
+											<%= link_to 'Edit', edit_modules_category_path(modules_category), class: "btn btn-primary btn-xs" %>
+											<%= link_to 'Trash', modules_category, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+											</div>
+										</td>
+									</tr>
+								<% end %>
+							</tbody>
+						</table>
+					</div>
+					<!-- Index Table -->
+
+					<!-- Panel Footer -->
+					<div class="box-footer clearfix">
+						<%= link_to 'New Category', new_modules_category_path, class: "btn btn-primary" %>
+					</div>
+					<!-- Panel Footer -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Main Content -->

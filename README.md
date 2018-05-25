@@ -1,28 +1,45 @@
-# Phcpress
-Short description and motivation.
+[![security](https://hakiri.io/github/PHCNetworks/phc-press/master.svg)](https://hakiri.io/github/PHCNetworks/phc-press/master)
+[![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-press/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
+[![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PHCNetworks/phc-press/blob/master/MIT-LICENSE)  
 
-## Usage
-How to use my plugin.
+### PHCPress (News/Blog Engine) Documentation
+PHCPress rails CMS engine to manage your website's articles, categories and media.
 
-## Installation
-Add this line to your application's Gemfile:
+* Website article posts with WYSIWYG editor.
+* Upload images locally or use any popular cloud service.
+* Customizable article categories module included.
 
-```ruby
-gem 'phcpress'
-```
+#### Step 1 - Add PHCPress to your gemfile  and run command  
 
-And then execute:
-```bash
-$ bundle
-```
+	gem 'phcpress', '~> 30.0'
+	bundle install
 
-Or install it yourself as:
-```bash
-$ gem install phcpress
-```
+#### Step 2 - Copy PHCPress Database Tables  
+To copy PHCPress' requried database migrations, copy each command individually to your terminal's command line.  
 
-## Contributing
-Contribution directions go here.
+	rails phcpress:install:migrations
+	rails db:migrate
 
-## License
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+#### Step 3 - Mount PHCPress & Add Routes
+Mount PHCPress by adding code below to your routes file.  
+
+	mount Phcpress::Engine, :at => '/'
+
+#### Step 4 - Recompile Assets  
+To properly function re-compile your application's assets to copy over required files.
+
+	rails assets:clobber
+	rails assets:precompile
+
+#### Step 5 - Generate Contact Form View (Customization)  
+All PHCPress views and layouts can be overwritten by copying files to your application.
+
+	rails generate phcpress:views
+
+#### How to Setup Image Uploads
+PHCPress default Carrierwave settings can be overwritten.  
+
+- [How to Override PHCPress Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader---Override)
+- [How to Override Cloudinary Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary))
+- [Critical Security Updates](https://github.com/PHCNetworks/phc-press/wiki/Critical-Security-Updates)
