@@ -5,10 +5,10 @@ module Phcpress
     extend FriendlyId
 
     # Add Paper Trail
-    has_paper_trail :class_name => 'Phcpress::PostVersions'
+    has_paper_trail :class_name => 'Phcpresspro::PostVersions'
 
-    # Image Upload Initialize
-    mount_uploader :pstimage, Phcpress::PstimageUploader
+    # Image Upload
+    has_one_attached :pstimage
 
     # Model Relationships
     has_many :connections, class_name: 'Phcpress::Modules::Connection', dependent: :destroy
