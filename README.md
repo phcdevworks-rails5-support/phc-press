@@ -1,8 +1,3 @@
-[![security](https://hakiri.io/github/PHCNetworks/phc-press/master.svg)](https://hakiri.io/github/PHCNetworks/phc-press/master)
-[![Code Climate](https://codeclimate.com/github/PHCNetworks/phc-press/badges/gpa.svg)](https://codeclimate.com/github/PHCNetworks/phc-press)
-[![Gem Version](https://badge.fury.io/rb/phcpress.svg)](https://badge.fury.io/rb/phcpress)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PHCNetworks/phc-press/blob/master/MIT-LICENSE)  
-
 ### PHCPress (News/Blog Engine) Documentation
 PHCPress rails CMS engine to manage your website's articles, categories and media.
 
@@ -36,10 +31,3 @@ To properly function re-compile your application's assets to copy over required 
 All PHCPress views and layouts can be overwritten by copying files to your application.
 
 	rails generate phcpress:views
-
-#### How to Setup Image Uploads
-PHCPress default Carrierwave settings can be overwritten.  
-
-- [How to Override PHCPress Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader---Override)
-- [How to Override Cloudinary Uploader](https://github.com/PHCNetworks/phc-press/wiki/Image-Uploader-(Cloudinary))
-- [Critical Security Updates](https://github.com/PHCNetworks/phc-press/wiki/Critical-Security-Updates)
