@@ -1,6 +1,6 @@
-class CreatePhcpressproArticlePosts < ActiveRecord::Migration[5.2]
+class CreatePhcpressArticlePosts < ActiveRecord::Migration[5.2]
   def change
-    create_table :phcpresspro_article_posts do |t|
+    create_table :phcpress_article_posts do |t|
 
       t.string :psttitle
       t.text :psttext

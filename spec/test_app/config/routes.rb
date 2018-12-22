@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Phcpress::Engine => "/phcpress"
+    mount Phcpress::Engine => "/"
 end

@@ -1,6 +1,6 @@
-class CreatePhcpressproModulesCategories < ActiveRecord::Migration[5.2]
+class CreatePhcpressModulesCategories < ActiveRecord::Migration[5.2]
   def change
-    create_table :phcpresspro_modules_categories do |t|
+    create_table :phcpress_modules_categories do |t|
 
       t.string :catname
 

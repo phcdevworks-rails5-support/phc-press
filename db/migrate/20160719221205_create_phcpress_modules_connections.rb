@@ -1,6 +1,6 @@
-class CreatePhcpressproModulesConnections < ActiveRecord::Migration[5.2]
+class CreatePhcpressModulesConnections < ActiveRecord::Migration[5.2]
   def change
-    create_table :phcpresspro_modules_connections do |t|
+    create_table :phcpress_modules_connections do |t|
 
       t.references :post
       t.references :category
