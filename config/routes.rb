@@ -1,5 +1,8 @@
 Phcpress::Engine.routes.draw do
 
+  # Define Root Path
+  root 'article/posts#index'
+
   # Frontend
   namespace :frontend do
     resources :articles
@@ -23,5 +26,8 @@ Phcpress::Engine.routes.draw do
     resources :connections, class_name: 'Phcpress::Modules::Connection'
     resources :categories, class_name: 'Phcpress::Modules::Category'
   end
+
+  # Add Security Features
+  mount Phcaccounts::Engine => "/"
 
 end

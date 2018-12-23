@@ -5,7 +5,7 @@ module Phcpress
     extend FriendlyId
 
     # Add Paper Trail
-    has_paper_trail :class_name => 'Phcpresspro::PostVersions'
+    has_paper_trail :class_name => 'Phcpress::PostVersions'
 
     # Image Upload
     has_one_attached :pstimage

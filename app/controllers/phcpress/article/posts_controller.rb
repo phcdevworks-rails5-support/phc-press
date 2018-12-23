@@ -3,7 +3,8 @@ require_dependency "phcpress/application_controller"
 module Phcpress
   class Article::PostsController < ApplicationController
 
-    # Filters & Security
+    # Security & Action Filters
+    before_action :authenticate_user!
     before_action :set_article_post, only: [:show, :edit, :update, :destroy]
 
     # Article Index

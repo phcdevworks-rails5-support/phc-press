@@ -5,36 +5,47 @@
 <% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
 
-<!-- Page Title Bar -->
-<section class="content-header">
-	<!-- Page Title and BreadCrumb -->
-	<h1><%= yield(:phc_title) %> <small><%= yield(:phc_title_tagline) %></small></h1>
-	<ol class="breadcrumb">
-		<li><%= yield(:phc_breadcrumb_one) %></li>
-		<li class="active"><%= yield(:phc_breadcrumb_two) %></li>
-	</ol>
-	<!-- Page Title and BreadCrumb -->
-</section>
-<!-- Page Title Bar -->
-
-<!-- Main Content -->
-<section class="content">
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="box">
-				<div class="box-header with-border">
-					<h3 class="box-title"><%= yield(:phc_title) %></h3>
-				</div>
-				<div class="box-body">
-
-					<!-- Show Content -->
-					<%= link_to 'Edit', edit_article_post_path(@article_post) %> |
-					<%= link_to 'Back', article_posts_path %>
-					<!-- Show Content -->
-
-				</div>
-			</div>
+<!-- Page Header -->
+<div class="row wrapper border-bottom white-bg page-heading">
+	<div class="col-sm-8">
+		<h2><%= yield(:phc_title) %></h2>
+		<!-- Bread Crumb -->
+		<ol class="breadcrumb">
+			<li><%= yield(:phc_breadcrumb_one) %></li>
+			<li class="active"><%= yield(:phc_breadcrumb_two) %></li>
+		</ol>
+		<!-- Bread Crumb -->
+	</div>
+	<div class="col-sm-4">
+		<div class="title-action">
+			<%= link_to phcpress.article_posts_path, class: "btn btn-default" do %>
+				<i class="fa fa fa-arrow-left"></i> Back to Article Index
+			<% end %>
 		</div>
 	</div>
-</section>
-<!-- Main Content -->
+</div>
+<!-- Page Header -->
+
+<!-- Page Content -->
+<div class="wrapper wrapper-content animated fadeInRight">
+	<div class="row">
+		<div class="col-lg-12">
+
+			<div class="ibox float-e-margins">
+				<div class="ibox-title">
+					<h5><%= yield(:phc_title_tagline) %></h5>
+					<div class="ibox-tools">
+						<a class="collapse-link">
+							<i class="fa fa-chevron-up"></i>
+						</a>
+						<a class="close-link">
+							<i class="fa fa-times"></i>
+						</a>
+					</div>
+				</div>
+				<div class="ibox-content">
+	<p id="notice"><%= notice %></p>
+	<%= link_to 'Edit', phcpress.edit_article_post_path(@article_post) %> |
+	<%= link_to 'Back', phcpress.article_posts_path %>
+</div>
+<!-- Page Content -->
