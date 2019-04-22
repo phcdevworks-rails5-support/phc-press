@@ -3,22 +3,26 @@ require_dependency "phcpress/application_controller"
 module Phcpress
   class Article::PostsController < ApplicationController
 
-    # Security & Action Filters
+    # Include Core Helpers, Security & Action Filters
+    include Phccorehelpers::PhcpluginsproHelper
     before_action :authenticate_user!
+    before_action :set_paper_trail_whodunnit
     before_action :set_article_post, only: [:show, :edit, :update, :destroy]
 
     # Article Index
     def index
-      @article_posts = Article::Post.all
+      @article_posts = Phcpress::Article::Post.where(org_id: current_user.org_id)
     end
 
     # Article Show
     def show
+      @article_post = Phcpress::Article::Post.friendly.find(params[:id])
+      @versions = Phcpress::PostVersions.where(item_id: params[:id], item_type: 'Phcpress::Article::Post')
     end
 
     # Article New
     def new
-      @article_post = Article::Post.new
+      @article_post = Phcpress::Article::Post.new
     end
 
     # Article Edit
@@ -27,9 +31,10 @@ module Phcpress
 
     # POST
     def create
-      @article_post = Article::Post.new(article_post_params)
+      @article_post = Phcpress::Article::Post.new(article_post_params)
+      @article_post.user_id = current_user.id
+      @article_post.org_id = current_user.org_id
       if @article_post.save
-        @article_post.connections.build
         redirect_to article_posts_url, notice: 'Post was successfully created.'
         else
           render :new
@@ -39,29 +44,28 @@ module Phcpress
     # PATCH/PUT
     def update
       if @article_post.update(article_post_params)
-        @article_post.connections.build
         redirect_to article_posts_url, notice: 'Post was successfully updated.'
-        else
-          render :edit
+      else
+        render :edit
       end
     end
 
     # DELETE
     def destroy
-      @article_post.destroy
+    @article_post.destroy
       redirect_to article_posts_url, notice: 'Post was successfully destroyed.'
     end
 
     private
 
-    # Common Callbacks
+    # Use callbacks to share common setup or constraints between actions.
     def set_article_post
-      @article_post = Article::Post.find(params[:id])
+      @article_post = Phcpress::Article::Post.find(params[:id])
     end
 
-    # Params Whitelist
+    # Only allow a trusted parameter "white list" through.
     def article_post_params
-      params.require(:article_post).permit(:psttitle, :psttext, :pststatus, :pstimage, :remove_pstimage, category_ids: [])
+      params.require(:article_post).permit(:psttittle, :psttext, :pststatus, :pstimage, :remove_pstimage, :slug, :user_id, :org_id, category_ids: [])
     end
 
   end

@@ -1,4 +1,4 @@
-<%= form_for(@article_post, :html => {:multipart => true}) do |phc_press_article_post| %>
+<%= form_with(model: article_post, local: true) do |form| %>
 <div class="row">
 	<div class="col-md-3">
 
@@ -8,11 +8,11 @@
 			</div>
 			<div class="panel-body">
 				<div class="form-group">
-					<%= phc_press_article_post.label :pststatus, "Post Status" %>
-					<%= phc_press_article_post.select( :pststatus, [['Draft','draft'],['Published','published'],['Review','review']], {}, {class: "form-control form-control-sm"}) %>
+					<%= form.label :pststatus, "Post Status" %>
+					<%= form.select( :pststatus, [['Draft','draft'],['Published','published'],['Review','review']], {}, {class: "form-control form-control-sm"}) %>
 				</div>
 				<div class="actions">
-					<%= phc_press_article_post.submit class: "btn btn-primary waves-effect" %>
+					<%= form.submit class: "btn btn-primary waves-effect" %>
 				</div>
 			</div>
 		</div>
@@ -23,13 +23,13 @@
 			</div>
 			<div class="panel-body">
 				<div class="form-group">
-					<%= phc_press_article_post.label :pstimage, "Featured Image" %>
-					<%= phc_press_article_post.file_field :pstimage, class: "form-control" %>
+					<%= form.label :pstimage, "Featured Image" %>
+					<%= form.file_field :pstimage, class: "form-control" %>
 				</div>
-				<% if phc_press_article_post.object.pstimage? %>
-					<%= image_tag phc_press_article_post.object.pstimage_url, class: "img-responsive img-thumbnail" %>
-					<%= phc_press_article_post.label :remove_pstimage %>
-					<%= phc_press_article_post.check_box :remove_pstimage %>
+				<% if form.object.pstimage? %>
+					<%= image_tag form.object.pstimage_url, class: "img-responsive img-thumbnail" %>
+					<%= form.label :remove_pstimage %>
+					<%= form.check_box :remove_pstimage %>
 				<% end %>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 				<h4 class="panel-title">Post Categories</h4>
 			</div>
 			<div class="panel-body">
-				<%= phc_press_article_post.collection_check_boxes :category_ids, Phcpress::Modules::Category.all, :id, :catname do |post_category| %>
+				<%= form.collection_check_boxes :category_ids, Phcpress::Article::Category.where(org_id: current_user.org_id), :id, :catname do |post_category| %>
 					<%= post_category.check_box %>
 					<%= post_category.label %></br>
 				<% end %>
@@ -52,17 +52,6 @@
 		<!-- PHCNotifi Render Validation -->
 		<%= render 'phcnotifi/validations', :object => @article_post %>
 		<!-- PHCNotifi Render Validation -->
-		<div class="panel panel-inverse">
-			<div class="panel-heading">
-				<h4 class="panel-title">Article TItle</h4>
-			</div>
-			<div class="panel-body">
-				<div class="form-group">
-					<%= phc_press_article_post.label :psttitle, "Article Title" %>
-					<%= phc_press_article_post.text_field :psttitle, class: "form-control" %>
-				</div>
-			</div>
-		</div>
 
 		<div class="panel panel-inverse">
 			<div class="panel-heading">
@@ -73,9 +62,13 @@
 				</div>
 				<h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
 			</div>
-			<div class="panel-body panel-form">
+			<div class="panel-body ">
 				<div class="form-group">
-					<%= phc_press_article_post.text_area :psttext, :class => "ckeditor form-control", :id => "editor1", :rows => 20, :cols => 60 %>
+					<%= form.label :psttittle, "Article Title" %>
+					<%= form.text_field :psttittle, class: "form-control" %>
+				</div>
+				<div class="form-group">
+					<%= form.text_area :psttext, :class => "ckeditor form-control", :id => "editor1", :rows => 20, :cols => 60 %>
 				</div>
 			</div>
 		</div>

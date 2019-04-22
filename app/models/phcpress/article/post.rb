@@ -11,11 +11,11 @@ module Phcpress
     has_one_attached :pstimage
 
     # Model Relationships
-    has_many :connections, class_name: 'Phcpress::Modules::Connection', dependent: :destroy
-    has_many :categories, class_name: 'Phcpress::Modules::Category', :through => :connections
+    has_and_belongs_to_many :categories, class_name: 'Phcpress::Article::Category', :join_table => 'categories_posts'
+    belongs_to :user, class_name: 'Phcaccounts::User'
 
     # Validation for Form Fields
-    validates :psttitle,
+    validates :psttittle,
       presence: true,
       length: { minimum: 3 }
 
@@ -32,7 +32,7 @@ module Phcpress
     # Define for Multiple Records
     def phcpress_post_slug
       [
-        [:psttitle]
+        [:psttittle]
       ]
     end
 

@@ -1,0 +1,13 @@
+<%= form_with(model: article_category, local: true) do |form| %>
+
+  <!-- PHCPress - Category Form -->
+  <div class="form-group">
+    <%= form.label :catname, "Category Name" %>
+    <%= form.text_field :catname, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+  <!-- PHCPress - Category Form -->
+
+<% end %>

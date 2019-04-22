@@ -1,6 +1,6 @@
 module Phcpress
-	class ApplicationMailer < ActionMailer::Base
-		default from: 'info@example.com'
-		layout 'mailer'
-	end
+  class ApplicationMailer < ActionMailer::Base
+    default from: 'from@example.com'
+    layout 'mailer'
+  end
 end

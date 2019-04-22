@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  mount Phcpress::Engine => "/"
+
+    # Index Route
+    root :to => 'website/pages#index'
+
+    # Engine Routes
+    mount Phcpress::Engine => "/"
+
 end

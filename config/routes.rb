@@ -1,33 +1,25 @@
 Phcpress::Engine.routes.draw do
 
-  # Define Root Path
-  root 'article/posts#index'
+  # Mount Accounts Engine
+  mount Phcaccounts::Engine, :at => '/'
 
-  # Frontend
-  namespace :frontend do
-    resources :articles
+  # Application Articles
+  namespace :article do
+    resources :categories, class_name: 'Phcpress::Articles::Category'
+    resources :posts, class_name: 'Phcpress::Articles::Post'
   end
 
-  # API
+  # Application FrontEnd
+  namespace :blog do
+    resources :articles, only: [:index, :show]
+  end
+
+  # Application API
   namespace :api do
     namespace :v1 do
       resources :posts, defaults: {format: 'json'}
       resources :categories, defaults: {format: 'json'}
     end
   end
-
-  # Article Routes
-  namespace :article do
-    resources :posts, class_name: 'Phcpress::Articles::Post'
-  end
-
-  # Module Routes
-  namespace :modules do
-    resources :connections, class_name: 'Phcpress::Modules::Connection'
-    resources :categories, class_name: 'Phcpress::Modules::Category'
-  end
-
-  # Add Security Features
-  mount Phcaccounts::Engine => "/"
 
 end

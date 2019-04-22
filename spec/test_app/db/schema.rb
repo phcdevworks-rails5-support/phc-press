@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_23_014230) do
+ActiveRecord::Schema.define(version: 2019_04_22_070525) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,29 +33,9 @@ ActiveRecord::Schema.define(version: 2018_12_23_014230) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "phcaccounts_admins", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer "sign_in_count", default: 0, null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip"
-    t.string "last_sign_in_ip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "firstname"
-    t.string "lastname"
-    t.string "username"
-    t.string "org_id"
-    t.index ["email"], name: "index_phcaccounts_admins_on_email", unique: true
-    t.index ["firstname"], name: "index_phcaccounts_admins_on_firstname"
-    t.index ["lastname"], name: "index_phcaccounts_admins_on_lastname"
-    t.index ["org_id"], name: "index_phcaccounts_admins_on_org_id", unique: true
-    t.index ["reset_password_token"], name: "index_phcaccounts_admins_on_reset_password_token", unique: true
-    t.index ["username"], name: "index_phcaccounts_admins_on_username", unique: true
+  create_table "categories_posts", id: false, force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.integer "post_id", null: false
   end
 
   create_table "phcaccounts_users", force: :cascade do |t|
@@ -75,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_12_23_014230) do
     t.string "lastname"
     t.string "username"
     t.string "org_id"
+    t.integer "role"
     t.index ["email"], name: "index_phcaccounts_users_on_email", unique: true
     t.index ["firstname"], name: "index_phcaccounts_users_on_firstname"
     t.index ["lastname"], name: "index_phcaccounts_users_on_lastname"
@@ -83,9 +64,18 @@ ActiveRecord::Schema.define(version: 2018_12_23_014230) do
     t.index ["username"], name: "index_phcaccounts_users_on_username", unique: true
   end
 
+  create_table "phcpress_article_categories", force: :cascade do |t|
+    t.string "catname"
+    t.string "slug"
+    t.string "user_id"
+    t.string "org_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "phcpress_article_posts", force: :cascade do |t|
-    t.string "psttitle"
-    t.text "psttext"
+    t.string "psttittle"
+    t.string "psttext"
     t.string "pststatus"
     t.string "pstimage"
     t.string "slug"
@@ -93,6 +83,16 @@ ActiveRecord::Schema.define(version: 2018_12_23_014230) do
     t.string "org_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "phcpress_category_versions", force: :cascade do |t|
+    t.string "item_type", null: false
+    t.integer "item_id", null: false
+    t.string "event", null: false
+    t.string "whodunnit"
+    t.text "object", limit: 1073741823
+    t.datetime "created_at"
+    t.index ["item_type", "item_id"], name: "press_category_versions"
   end
 
   create_table "phcpress_friendly_id_slugs", force: :cascade do |t|
@@ -107,25 +107,14 @@ ActiveRecord::Schema.define(version: 2018_12_23_014230) do
     t.index ["sluggable_type"], name: "index_phcpress_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "phcpress_modules_categories", force: :cascade do |t|
-    t.string "catname"
-    t.string "slug"
-    t.string "user_id"
-    t.string "org_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "phcpress_modules_connections", force: :cascade do |t|
-    t.integer "post_id"
-    t.integer "category_id"
-    t.string "slug"
-    t.string "user_id"
-    t.string "org_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_phcpress_modules_connections_on_category_id"
-    t.index ["post_id"], name: "index_phcpress_modules_connections_on_post_id"
+  create_table "phcpress_post_versions", force: :cascade do |t|
+    t.string "item_type", null: false
+    t.integer "item_id", null: false
+    t.string "event", null: false
+    t.string "whodunnit"
+    t.text "object", limit: 1073741823
+    t.datetime "created_at"
+    t.index ["item_type", "item_id"], name: "press_post_versions"
   end
 
 end

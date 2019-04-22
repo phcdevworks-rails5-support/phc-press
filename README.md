@@ -31,3 +31,4 @@ To properly function re-compile your application's assets to copy over required 
 All PHCPress views and layouts can be overwritten by copying files to your application.
 
 	rails generate phcpress:views
+	
