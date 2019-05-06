@@ -11,7 +11,7 @@ module Phcpress
 
     # Categories Index
     def index
-      @article_categories = Phcpress::Article::Category.where(org_id: current_user.org_id)
+      @article_categories = Phcpress::Article::Category.all
     end
 
     # Categories Show
@@ -33,7 +33,6 @@ module Phcpress
     def create
       @article_category = Phcpress::Article::Category.new(article_category_params)
       @article_category.user_id = current_user.id
-      @article_category.org_id = current_user.org_id
       if @article_category.save
         redirect_to article_categories_url, notice: 'Category was successfully created.'
       else
@@ -65,7 +64,7 @@ module Phcpress
 
     # Only allow a trusted parameter "white list" through.
     def article_category_params
-      params.require(:article_category).permit(:catname, :slug, :user_id, :org_id)
+      params.require(:article_category).permit(:category_name, :slug, :user_id)
     end
 
   end

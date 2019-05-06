@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_22_070525) do
+ActiveRecord::Schema.define(version: 2019_05_06_031017) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -65,22 +65,20 @@ ActiveRecord::Schema.define(version: 2019_04_22_070525) do
   end
 
   create_table "phcpress_article_categories", force: :cascade do |t|
-    t.string "catname"
+    t.string "category_name"
     t.string "slug"
     t.string "user_id"
-    t.string "org_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "phcpress_article_posts", force: :cascade do |t|
-    t.string "psttittle"
-    t.string "psttext"
-    t.string "pststatus"
-    t.string "pstimage"
+    t.string "post_tittle"
+    t.string "post_text"
+    t.string "post_status"
+    t.string "post_image"
     t.string "slug"
     t.string "user_id"
-    t.string "org_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

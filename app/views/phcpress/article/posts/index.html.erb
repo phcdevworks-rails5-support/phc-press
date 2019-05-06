@@ -41,9 +41,9 @@
 				<tbody>
 					<% @article_posts.each do |article_post| %>
 						<tr>
-							<td><%= article_post.psttittle %></td>
-							<td><%= truncate(article_post.psttext, :length => 80, :escape => false) %></td>
-							<td><%= article_post.pststatus.capitalize %></td>
+							<td><%= article_post.post_tittle %></td>
+							<td><%= truncate(article_post.post_text, :length => 80, :escape => false) %></td>
+							<td><%= article_post.post_status.capitalize %></td>
 							<td><div class="btn-group" role="group" aria-label="Blog Articles">
 								<%= link_to 'Edit Post', edit_article_post_path(article_post), class: "btn btn-primary btn-xs" %>
 								<%= link_to 'Trash Post', article_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -52,6 +52,10 @@
 					<% end %>
 				</tbody>
 			</table>
+			<%= link_to phcpress.new_article_post_path, class: "btn btn-primary" do %>
+				<i class="fas fa-plus-circle"></i>
+				<%= "Add a New Article Post" %>
+			<% end %>
 		</div>
 		<!-- Table - Article Index -->
 	</div>

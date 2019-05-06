@@ -9,7 +9,7 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.email       = ["info@phcdevworks.com"]
   phc_gem_spec.homepage    = "https://phcdevworks.com"
   phc_gem_spec.summary     = "Rails 5.2 App Engine"
-  phc_gem_spec.description = "Ruby on Rails 5.2 Content Management Engine"
+  phc_gem_spec.description = "PHCPress rails CMS engine to manage your website's articles, categories and media."
   phc_gem_spec.license     = "MIT"
 
   #Load Engine Files

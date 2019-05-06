@@ -12,7 +12,7 @@ module Phcpress
     belongs_to :user, class_name: 'Phcaccounts::User'
 
     # Validation for Form Fields
-    validates :catname,
+    validates :category_name,
       presence: true,
       uniqueness: true,
       length: { minimum: 3 }
@@ -23,7 +23,7 @@ module Phcpress
     # Define for Multiple Records
     def phcpress_category_slug
       [
-        [:catname]
+        [:category_name]
       ]
     end
 

@@ -11,7 +11,7 @@ module Phcpress
 
     # Article Index
     def index
-      @article_posts = Phcpress::Article::Post.where(org_id: current_user.org_id)
+      @article_posts = Phcpress::Article::Post.all
     end
 
     # Article Show
@@ -33,7 +33,6 @@ module Phcpress
     def create
       @article_post = Phcpress::Article::Post.new(article_post_params)
       @article_post.user_id = current_user.id
-      @article_post.org_id = current_user.org_id
       if @article_post.save
         redirect_to article_posts_url, notice: 'Post was successfully created.'
         else
@@ -65,7 +64,7 @@ module Phcpress
 
     # Only allow a trusted parameter "white list" through.
     def article_post_params
-      params.require(:article_post).permit(:psttittle, :psttext, :pststatus, :pstimage, :remove_pstimage, :slug, :user_id, :org_id, category_ids: [])
+      params.require(:article_post).permit(:post_tittle, :post_text, :post_status, :post_image, :remove_post_image, :slug, :user_id, category_ids: [])
     end
 
   end

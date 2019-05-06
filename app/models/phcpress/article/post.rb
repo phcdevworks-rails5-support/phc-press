@@ -8,22 +8,22 @@ module Phcpress
     has_paper_trail :class_name => 'Phcpress::PostVersions'
 
     # Image Upload
-    has_one_attached :pstimage
+    has_one_attached :post_image
 
     # Model Relationships
     has_and_belongs_to_many :categories, class_name: 'Phcpress::Article::Category', :join_table => 'categories_posts'
     belongs_to :user, class_name: 'Phcaccounts::User'
 
     # Validation for Form Fields
-    validates :psttittle,
+    validates :post_tittle,
       presence: true,
       length: { minimum: 3 }
 
-    validates :psttext,
+    validates :post_text,
       presence: true,
       length: { minimum: 3 }
 
-    validates :pststatus,
+    validates :post_status,
       presence: true
 
     # Clean URL Define
@@ -32,7 +32,7 @@ module Phcpress
     # Define for Multiple Records
     def phcpress_post_slug
       [
-        [:psttittle]
+        [:post_tittle]
       ]
     end
 

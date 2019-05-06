@@ -8,8 +8,8 @@
 			</div>
 			<div class="panel-body">
 				<div class="form-group">
-					<%= form.label :pststatus, "Post Status" %>
-					<%= form.select( :pststatus, [['Draft','draft'],['Published','published'],['Review','review']], {}, {class: "form-control form-control-sm"}) %>
+					<%= form.label :post_status, "Post Status" %>
+					<%= form.select( :post_status, [['Draft','draft'],['Published','published'],['Review','review']], {}, {class: "form-control form-control-sm"}) %>
 				</div>
 				<div class="actions">
 					<%= form.submit class: "btn btn-primary waves-effect" %>
@@ -23,13 +23,13 @@
 			</div>
 			<div class="panel-body">
 				<div class="form-group">
-					<%= form.label :pstimage, "Featured Image" %>
-					<%= form.file_field :pstimage, class: "form-control" %>
+					<%= form.label :post_image, "Featured Image" %>
+					<%= form.file_field :post_image, class: "form-control" %>
 				</div>
-				<% if form.object.pstimage? %>
-					<%= image_tag form.object.pstimage_url, class: "img-responsive img-thumbnail" %>
-					<%= form.label :remove_pstimage %>
-					<%= form.check_box :remove_pstimage %>
+				<% if form.object.post_image? %>
+					<%= image_tag form.object.post_image_url, class: "img-responsive img-thumbnail" %>
+					<%= form.label :remove_post_image %>
+					<%= form.check_box :remove_post_image %>
 				<% end %>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 				<h4 class="panel-title">Post Categories</h4>
 			</div>
 			<div class="panel-body">
-				<%= form.collection_check_boxes :category_ids, Phcpress::Article::Category.where(org_id: current_user.org_id), :id, :catname do |post_category| %>
+				<%= form.collection_check_boxes :category_ids, Phcpress::Article::Category.all, :id, :category_name do |post_category| %>
 					<%= post_category.check_box %>
 					<%= post_category.label %></br>
 				<% end %>
@@ -64,11 +64,11 @@
 			</div>
 			<div class="panel-body ">
 				<div class="form-group">
-					<%= form.label :psttittle, "Article Title" %>
-					<%= form.text_field :psttittle, class: "form-control" %>
+					<%= form.label :post_tittle, "Article Title" %>
+					<%= form.text_field :post_tittle, class: "form-control" %>
 				</div>
 				<div class="form-group">
-					<%= form.text_area :psttext, :class => "ckeditor form-control", :id => "editor1", :rows => 20, :cols => 60 %>
+					<%= form.text_area :post_text, :class => "ckeditor form-control", :id => "editor1", :rows => 20, :cols => 60 %>
 				</div>
 			</div>
 		</div>
