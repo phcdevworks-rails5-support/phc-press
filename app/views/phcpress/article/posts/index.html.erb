@@ -44,10 +44,12 @@
 							<td><%= article_post.post_tittle %></td>
 							<td><%= truncate(article_post.post_text, :length => 80, :escape => false) %></td>
 							<td><%= article_post.post_status.capitalize %></td>
-							<td><div class="btn-group" role="group" aria-label="Blog Articles">
-								<%= link_to 'Edit Post', edit_article_post_path(article_post), class: "btn btn-primary btn-xs" %>
-								<%= link_to 'Trash Post', article_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
-							</div></td>
+							<td>
+								<div class="btn-group d-flex" role="group">
+									<%= link_to 'Update Post', edit_article_post_path(article_post), class: "btn btn-primary btn-xs" %>
+									<%= link_to 'Remove Post', article_post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+								</div>
+							</td>
 						</tr>
 					<% end %>
 				</tbody>

@@ -41,7 +41,12 @@
 					<% @article_categories.each do |article_category| %>
 						<tr>
 							<td><%= link_to article_category.category_name, phcpress.edit_article_category_path(article_category) %></td>
-							<td><%= link_to 'Trash', article_category, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+							<td>
+								<div class="btn-group d-flex" role="group">
+									<%= link_to 'Edit Category', edit_article_category_path(article_category), class: "btn btn-primary btn-xs" %>
+									<%= link_to 'Remove Category', article_category, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+								</div>
+							</td>
 						</tr>
 					<% end %>
 				</tbody>

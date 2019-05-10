@@ -8,7 +8,7 @@ module Phcpress
     has_paper_trail :class_name => 'Phcpress::CategoryVersions'
 
     # Relationships
-    has_and_belongs_to_many :posts, class_name: 'Phcpress::Article::Post', :join_table => 'categories_posts'
+    has_and_belongs_to_many :posts, class_name: 'Phcpress::Article::Post', :join_table => 'categories_posts', :dependent => :destroy
     belongs_to :user, class_name: 'Phcaccounts::User'
 
     # Validation for Form Fields
