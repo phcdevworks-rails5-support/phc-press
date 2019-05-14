@@ -34,7 +34,7 @@ module Phcpress
       @article_category = Phcpress::Article::Category.new(article_category_params)
       @article_category.user_id = current_user.id
       if @article_category.save
-        redirect_to article_categories_url, notice: 'Category was successfully created.'
+        redirect_to article_categories_url, :flash => { :success => 'Category was successfully created.' }
       else
           render :new
       end
@@ -43,7 +43,7 @@ module Phcpress
     # PATCH/PUT
     def update
       if @article_category.update(article_category_params)
-        redirect_to article_categories_url, notice: 'Category was successfully updated.'
+        redirect_to article_categories_url, :flash => { :success => 'Category was successfully updated.' }
       else
         render :edit
       end
@@ -52,7 +52,7 @@ module Phcpress
     # DELETE
     def destroy
       @article_category.destroy
-      redirect_to article_categories_url, notice: 'Category was successfully destroyed.'
+      redirect_to article_categories_url, :flash => { :success => 'Category was successfully destroyed.' }
     end
 
     private

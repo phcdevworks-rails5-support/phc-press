@@ -34,7 +34,7 @@ module Phcpress
       @article_post = Phcpress::Article::Post.new(article_post_params)
       @article_post.user_id = current_user.id
       if @article_post.save
-        redirect_to article_posts_url, notice: 'Post was successfully created.'
+        redirect_to article_posts_url, :flash => { :success => 'Post was successfully created.' }
         else
           render :new
       end
@@ -43,7 +43,7 @@ module Phcpress
     # PATCH/PUT
     def update
       if @article_post.update(article_post_params)
-        redirect_to article_posts_url, notice: 'Post was successfully updated.'
+        redirect_to article_posts_url, :flash => { :success => 'Post was successfully updated.' }
       else
         render :edit
       end
@@ -52,7 +52,7 @@ module Phcpress
     # DELETE
     def destroy
     @article_post.destroy
-      redirect_to article_posts_url, notice: 'Post was successfully destroyed.'
+      redirect_to article_posts_url, :flash => { :error => 'Post was successfully destroyed.' }
     end
 
     private

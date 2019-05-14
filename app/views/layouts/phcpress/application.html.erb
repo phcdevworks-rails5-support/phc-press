@@ -48,8 +48,9 @@
     <div class="sidebar-bg"></div>
     <!-- Page Sidebar -->
 
-    <!-- Page Content -->
+     <!-- Page Content -->
     <div id="content" class="content">
+      <%= render 'phcnotifi/default/notifications' %>
       <%= yield %>
     </div>
     <!-- Page Content -->
@@ -65,6 +66,7 @@
 
   <!-- JavaScript -->
   <%= javascript_include_tag "phcpress/application", 'data-turbolinks-track': 'reload' %>
+  <script src="https://cdn.ckeditor.com/4.10.0/full/ckeditor.js"></script>
   <!-- JavaScript -->
 
   <!-- JavaScript Loader -->
