@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_031534) do
+ActiveRecord::Schema.define(version: 2019_05_17_060044) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2019_05_14_031534) do
   end
 
   create_table "phcpress_article_posts", force: :cascade do |t|
-    t.string "post_tittle"
+    t.string "post_title"
     t.text "post_text"
     t.string "post_status"
     t.string "post_image"
