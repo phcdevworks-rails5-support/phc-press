@@ -7,40 +7,40 @@ module Phcpress
     include Phccorehelpers::PhcpluginsproHelper
     before_action :authenticate_user!
     before_action :set_paper_trail_whodunnit
-    before_action :set_article_category, only: [:show, :edit, :update, :destroy]
+    before_action :set_article_category, only: [:edit, :update, :destroy]
 
-    # Categories Index
+    # INDEX
     def index
       @article_categories = Phcpress::Article::Category.all
     end
 
-    # Categories Show
+    # SHOW
     def show
       @article_category = Phcpress::Article::Category.friendly.find(params[:id])
       @versions = Phcpress::CategoryVersions.where(item_id: params[:id], item_type: 'Phcpress::Article::Category')
     end
 
-    # Categories New
+    # NEW
     def new
       @article_category = Phcpress::Article::Category.new
     end
 
-    # Categories Edit
+    # EDIT
     def edit
     end
 
-    # POST
+    # CREATE
     def create
       @article_category = Phcpress::Article::Category.new(article_category_params)
       @article_category.user_id = current_user.id
       if @article_category.save
         redirect_to article_categories_url, :flash => { :success => 'Category was successfully created.' }
       else
-          render :new
+        render :new
       end
     end
 
-    # PATCH/PUT
+    # UPDATE
     def update
       if @article_category.update(article_category_params)
         redirect_to article_categories_url, :flash => { :success => 'Category was successfully updated.' }
@@ -57,12 +57,12 @@ module Phcpress
 
     private
 
-    # Use callbacks to share common setup or constraints between actions.
+    # Common Callbacks
     def set_article_category
       @article_category = Phcpress::Article::Category.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
+    # Whitelist
     def article_category_params
       params.require(:article_category).permit(:category_name, :slug, :user_id)
     end

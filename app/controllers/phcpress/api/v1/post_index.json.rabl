@@ -1,2 +1,2 @@
 object @phcpress_posts_index
-    attributes :id, :psttittle, :psttext, :pststatus, :pstimage
+    attributes :id, :post_title, :post_text, :post_status
